@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/*
+  SIGNAL design system.
+  Editorial, high-contrast, monospace accents for the "every fact is traceable"
+  feel. Light + dark via prefers-color-scheme (manual toggle added in Phase 7).
+  Restrained green accent nods to the circular-economy subject.
+*/
+
+:root {
+  --background: #fbfbf9;
+  --foreground: #16181c;
+  --surface: #ffffff;
+  --surface-2: #f4f4f0;
+  --border: #e3e3dc;
+  --muted: #5c6067;
+  --accent: #1f6f52;
+  --accent-fg: #ffffff;
+  --accent-soft: #e5f0ea;
+  --warn: #9a5b00;
+  --warn-soft: #fbeecf;
+  --ring: #1f6f52;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0d10;
+    --foreground: #e8eaed;
+    --surface: #14171c;
+    --surface-2: #1b1f26;
+    --border: #2a2f38;
+    --muted: #9aa1ac;
+    --accent: #4bbd8f;
+    --accent-fg: #08130d;
+    --accent-soft: #123024;
+    --warn: #e0a24a;
+    --warn-soft: #33270f;
+    --ring: #4bbd8f;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* Focus visibility for keyboard users (Phase 7 a11y groundwork). */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Reusable pieces referenced across pages. */
+.mono {
+  font-family: var(--font-mono);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
