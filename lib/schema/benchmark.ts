@@ -13,6 +13,7 @@ export const BenchmarkResultSchema = z.object({
   answerSummary: z.string(),
   notes: z.string().optional(),
 });
+export type BenchmarkResult = z.infer<typeof BenchmarkResultSchema>;
 
 export const BenchmarkQuestionSchema = z.object({
   id: z.string().min(1),

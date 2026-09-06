@@ -1,40 +1,419 @@
 {
   "budgetPerMonth": 100,
-  "totalCredits": 39,
+  "totalCredits": 64,
   "entries": [
-    { "at": "2026-09-06T10:00:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Primark to a Cala entity", "phase": "2-partners" },
-    { "at": "2026-09-06T10:01:00.000Z", "tool": "entity_introspection", "credits": 1, "purpose": "Learn the Company field schema", "phase": "1-recon" },
-    { "at": "2026-09-06T10:02:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "Primark typed data + esg_policy + parent", "phase": "2-partners" },
-    { "at": "2026-09-06T10:03:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Analog Devices", "phase": "2-partners" },
-    { "at": "2026-09-06T10:04:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "Analog Devices Inc typed data", "phase": "2-partners" },
-    { "at": "2026-09-06T10:05:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Analog Devices commitments (rejected: too complex)", "phase": "2-partners" },
-    { "at": "2026-09-06T10:06:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Analog Devices environmental commitments", "phase": "2-partners" },
-    { "at": "2026-09-06T10:07:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Irish circular-economy / reuse grants", "phase": "3-funding" },
-    { "at": "2026-09-06T10:08:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Textile EPR requirements (WFD)", "phase": "4-policy" },
-    { "at": "2026-09-06T10:09:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Clothing reuse carbon savings (LCA)", "phase": "5-impact" },
-    { "at": "2026-09-06T11:10:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU-wide youth funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:11:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU-wide social inclusion funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:12:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU-wide arts & culture funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:13:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU-wide health & wellbeing funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:14:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU-wide environment & climate funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:20:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "ESPR + Digital Product Passport (policy)", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:21:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "CSRD Omnibus thresholds (policy)", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:22:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU Social Economy Action Plan (policy)", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:23:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "EU Youth Strategy (policy)", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:24:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "New European Bauhaus (policy)", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:30:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "UK national community funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:31:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "France national community funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:32:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Germany national community funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:33:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Spain national community funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:34:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Netherlands national community funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:00:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: home energy retrofit carbon savings", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:01:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: SROI for social inclusion", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:02:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: youth skills employment outcomes", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:03:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: arts participation and wellbeing", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:04:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: community health prevention ROI", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:05:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve H&M", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:06:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Marks & Spencer", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:07:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "H&M esg_policy + headcount", "phase": "6-expansion" },
-    { "at": "2026-09-06T12:08:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "Marks & Spencer esg_policy + headcount", "phase": "6-expansion" }
+    {
+      "at": "2026-09-06T10:00:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "Resolve Primark to a Cala entity",
+      "phase": "2-partners"
+    },
+    {
+      "at": "2026-09-06T10:01:00.000Z",
+      "tool": "entity_introspection",
+      "credits": 1,
+      "purpose": "Learn the Company field schema",
+      "phase": "1-recon"
+    },
+    {
+      "at": "2026-09-06T10:02:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "Primark typed data + esg_policy + parent",
+      "phase": "2-partners"
+    },
+    {
+      "at": "2026-09-06T10:03:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "Resolve Analog Devices",
+      "phase": "2-partners"
+    },
+    {
+      "at": "2026-09-06T10:04:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "Analog Devices Inc typed data",
+      "phase": "2-partners"
+    },
+    {
+      "at": "2026-09-06T10:05:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Analog Devices commitments (rejected: too complex)",
+      "phase": "2-partners"
+    },
+    {
+      "at": "2026-09-06T10:06:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Analog Devices environmental commitments",
+      "phase": "2-partners"
+    },
+    {
+      "at": "2026-09-06T10:07:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Irish circular-economy / reuse grants",
+      "phase": "3-funding"
+    },
+    {
+      "at": "2026-09-06T10:08:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Textile EPR requirements (WFD)",
+      "phase": "4-policy"
+    },
+    {
+      "at": "2026-09-06T10:09:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Clothing reuse carbon savings (LCA)",
+      "phase": "5-impact"
+    },
+    {
+      "at": "2026-09-06T11:10:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU-wide youth funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:11:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU-wide social inclusion funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:12:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU-wide arts & culture funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:13:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU-wide health & wellbeing funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:14:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU-wide environment & climate funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:20:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "ESPR + Digital Product Passport (policy)",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:21:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "CSRD Omnibus thresholds (policy)",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:22:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU Social Economy Action Plan (policy)",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:23:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "EU Youth Strategy (policy)",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:24:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "New European Bauhaus (policy)",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:30:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "UK national community funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:31:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "France national community funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:32:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Germany national community funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:33:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Spain national community funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T11:34:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Netherlands national community funding",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:00:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Impact: home energy retrofit carbon savings",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:01:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Impact: SROI for social inclusion",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:02:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Impact: youth skills employment outcomes",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:03:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Impact: arts participation and wellbeing",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:04:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "Impact: community health prevention ROI",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:05:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "Resolve H&M",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:06:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "Resolve Marks & Spencer",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:07:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "H&M esg_policy + headcount",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T12:08:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "Marks & Spencer esg_policy + headcount",
+      "phase": "6-expansion"
+    },
+    {
+      "at": "2026-09-06T13:00:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: F1",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:01:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: F2",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:02:00.000Z",
+      "tool": "knowledge_query",
+      "credits": 1,
+      "purpose": "benchmark: F3",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:03:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: F4",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:04:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: F5",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:05:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: F6",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:06:00.000Z",
+      "tool": "knowledge_query",
+      "credits": 1,
+      "purpose": "benchmark: F7",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:07:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: P8",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:08:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: P9",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:09:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: P10",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:10:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: P11",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:11:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: P12",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:12:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: P13",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:13:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: PA14",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:14:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: PA15",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:15:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: PA16",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:16:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: PA17",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:17:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: PA18",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:18:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: PA19",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:19:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: I20",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:20:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: I21",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:21:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: I22",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:22:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: I23",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:23:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: I24",
+      "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T13:24:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "benchmark: I25",
+      "phase": "6-benchmark"
+    }
   ]
 }

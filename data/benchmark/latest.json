@@ -1,0 +1,282 @@
+{
+  "runId": "2026-09-06-cala-vs-web-25q",
+  "ranAt": "2026-09-06T13:00:00.000Z",
+  "methodologyNote": "Twenty-five questions drawn from this tool's real domain (Irish and EU nonprofit funding, textile EPR and related EU regulation, corporate commitments, and reuse/social-value impact factors), roughly six per domain, mixing lookup, filter and synthesis. Ground truth was established by hand from a primary source first and recorded per question; each side was graded blind against it. Cala side: one call per question via knowledge_search (narrative/lookup/synthesis) or knowledge_query (F3, F7, which are list-shaped); no retries and no duplicate inputs, so a weak result is recorded as-is. Web side: one WebSearch call per question, answered from the returned results block only. tokensConsumed is the count the answering agent must read to produce a cited answer, measured with a single fixed tokeniser (js-tiktoken, cl100k_base) over: for Cala, the returned answer payload (the knowledge_search content field, or the knowledge_query results rows); for web, the WebSearch results block (titles, URLs and snippet/synthesis text) with the fixed reminder boilerplate excluded. Reproduce it by re-running each query and counting the same text with the committed script scripts/benchmark/count-tokens.mjs. citationReturned records whether the method returned at least one resolvable source URL. latencyMs is deliberately omitted: this harness does not expose reliable per-call timing and inventing figures would breach the no-fabrication rule. IMPORTANT FAIRNESS CAVEAT: the Cala figure is the slim answer payload. Cala's DEFAULT response also returns large explainability and context provenance arrays; measured in full, one sampled question (F1) came to 1881 tokens versus 331 for the answer alone (about 5.7x), larger than the web block for the same question. So Cala's token advantage exists only when the response is deliberately slimmed (content only, explainability=false, return_entities=false). Aggregate result across 25 questions: Cala answer payloads totalled 6389 tokens (avg ~256), web results blocks 11044 (avg ~442), so Cala was about 1.7x leaner on this measure, well short of the roughly 8x public claim, which would require a web baseline of reading full source pages rather than a modern search API's synthesised snippets. Correctness: Cala 25/25, web 24/25 (web missed the true maximum grant in F4). Citations: web 25/25; Cala 23/25, since knowledge_query (F3, F7) returned rows without sources. Cala credit cost of the run: 25 credits.",
+  "questions": [
+    {
+      "id": "F1",
+      "question": "Who is eligible to apply for a European Solidarity Corps Solidarity Project (group size, age, and whether an informal group can apply directly)?",
+      "domain": "funding",
+      "groundTruth": "A group of at least five young people aged 18 to 30, legally resident in the same participating country, can apply directly via the European Solidarity Corps Portal, with no established organisation required. Projects last 2 to 12 months.",
+      "groundTruthSourceUrl": "https://youth.europa.eu/sites/default/files/inline-files/european_solidarity_corps_guide_2026_EN.pdf",
+      "results": [
+        { "method": "cala", "tokensConsumed": 331, "citationReturned": true, "correct": true, "answerSummary": "At least 5 young people aged 18-30 in the same country; Solidarity Projects are the strand where young people apply directly; 2-12 months.", "notes": "Correct and precise; cited Leargas and EURES sources." },
+        { "method": "web-search", "tokensConsumed": 466, "citationReturned": true, "correct": true, "answerSummary": "Min 5 people aged 18-30 from the same country; application can be submitted by the group itself or an organisation on its behalf.", "notes": "Correct, though the synthesis led with the organisation-on-behalf route; an earlier generic Youth Portal page had wrongly implied informal groups cannot apply directly." }
+      ]
+    },
+    {
+      "id": "F2",
+      "question": "How much funding does Ireland's Circular Economy Innovation Grant Scheme (CEIGS) provide, and who administers it?",
+      "domain": "funding",
+      "groundTruth": "For the 2025 round, individual grants of 40,000 to 50,000 euro (650,000 euro total), administered in partnership with Community Foundation Ireland for the Department of Climate, Energy and the Environment.",
+      "groundTruthSourceUrl": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/applications-now-open-for-2025-circular-economy-innovation-grant-scheme/",
+      "results": [
+        { "method": "cala", "tokensConsumed": 323, "citationReturned": true, "correct": true, "answerSummary": "2025 individual grants 40,000-50,000 euro; led by the Dept of Climate, Energy and the Environment; cumulative 2.44m euro to 50 projects.", "notes": "Correct; cited gov.ie." },
+        { "method": "web-search", "tokensConsumed": 568, "citationReturned": true, "correct": true, "answerSummary": "2025 round 650,000 euro total, individual grants 40,000-50,000 euro; deadline 8 Oct 2025.", "notes": "Correct; also surfaced the round deadline." }
+      ]
+    },
+    {
+      "id": "F3",
+      "question": "Which EU funding programmes accept applications from informal youth groups without a registered organisation?",
+      "domain": "funding",
+      "groundTruth": "The two principal EU programmes open to informal or unincorporated youth groups are the European Solidarity Corps (Solidarity Projects) and Erasmus+ Youth (youth participation activities and youth exchanges).",
+      "groundTruthSourceUrl": "https://youth.europa.eu/solidarity/young-people/solidarity-projects_en",
+      "results": [
+        { "method": "cala", "tokensConsumed": 310, "citationReturned": false, "correct": true, "answerSummary": "knowledge_query rows: Erasmus+ Youth, European Solidarity Corps Solidarity Projects, plus EU Youth Empowerment Fund and Youth Climate Changemakers Fund.", "notes": "Correct on the two canonical programmes, but knowledge_query returned structured rows with NO source URLs; the two extra funds are smaller and less official." },
+        { "method": "web-search", "tokensConsumed": 511, "citationReturned": true, "correct": true, "answerSummary": "Erasmus+ and European Solidarity Corps allow informal youth groups; EU Youth Empowerment Fund gives 500-1500 euro to informal groups.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "F4",
+      "question": "What is the maximum grant available from Aktion Mensch in Germany?",
+      "domain": "funding",
+      "groundTruth": "Aktion Mensch's maximum grant is roughly 450,000 euro (Aktion Mensch e.V. project funding) up to 600,000 euro (Aktion Mensch Stiftung model projects); micro-grants are up to 5,000 euro. It is not a 10,000-euro-capped funder.",
+      "groundTruthSourceUrl": "https://www.aktion-mensch.de/foerderung/foerderprogramme/stiftung",
+      "results": [
+        { "method": "cala", "tokensConsumed": 344, "citationReturned": true, "correct": true, "answerSummary": "Overall maximum ~600,000 euro (Stiftung) / 450,000 euro (e.V. project funding); micro-grants up to 5,000 euro.", "notes": "Correct and cited to aktion-mensch.de. This also revealed a console-data error (the signal listed Aktion Mensch as up to 10,000 euro)." },
+        { "method": "web-search", "tokensConsumed": 477, "citationReturned": true, "correct": false, "answerSummary": "Reported the maximum as ranging 5,000-10,000 euro across specific programmes, with larger projects percentage-based and no fixed ceiling.", "notes": "INCORRECT on the maximum: the top search results only surfaced small local-project tiers (5,000-10,000 euro) and missed the 450,000/600,000-euro ceilings. The clearest Cala win of the run." }
+      ]
+    },
+    {
+      "id": "F5",
+      "question": "What is the largest national grant fund for Spain's Third Sector, and its 2025 scale?",
+      "domain": "funding",
+      "groundTruth": "The largest national Third Sector fund in Spain is the 0.7% grant scheme (from IRPF income tax and corporate tax), with the state-level allocation raised to nearly 94 million euro in 2025.",
+      "groundTruthSourceUrl": "https://www.plataformatercersector.es/en/what-we-do/subsidies-0-7-8/",
+      "results": [
+        { "method": "cala", "tokensConsumed": 409, "citationReturned": true, "correct": true, "answerSummary": "The Subvenciones del 0,7% (IRPF and corporate tax); state allocation raised to nearly 94m euro in 2025; mixed 80/20 model.", "notes": "Correct with the precise 2025 figure; cited." },
+        { "method": "web-search", "tokensConsumed": 544, "citationReturned": true, "correct": true, "answerSummary": "Identified the 0.7% IRPF scheme as the main national fund but said the exact national total for 2025 was not found in the results.", "notes": "Correct on the fund identity; missed the ~94m euro national figure that Cala gave." }
+      ]
+    },
+    {
+      "id": "F6",
+      "question": "Which French state fund supports small associations with operating and project grants?",
+      "domain": "funding",
+      "groundTruth": "The FDVA (Fonds pour le developpement de la vie associative), especially FDVA 2, is the French state fund supporting small associations with operating and innovative-project grants.",
+      "groundTruthSourceUrl": "https://associations.gouv.fr/fonds-pour-le-developpement-de-la-vie-associative-fdva",
+      "results": [
+        { "method": "cala", "tokensConsumed": 260, "citationReturned": true, "correct": true, "answerSummary": "The FDVA; FDVA 2 funds operating costs and innovative projects, with particular attention to small associations.", "notes": "Correct; cited associations.gouv.fr and Senat." },
+        { "method": "web-search", "tokensConsumed": 607, "citationReturned": true, "correct": true, "answerSummary": "The FDVA; prioritises small associations (fewer than two employees); project grants 1,000-5,000 euro.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "F7",
+      "question": "What is the largest community grant funder in the United Kingdom?",
+      "domain": "funding",
+      "groundTruth": "The National Lottery Community Fund is the UK's largest community funder (Awards for All small grants of 300 to 10,000 pounds).",
+      "groundTruthSourceUrl": "https://www.tnlcommunityfund.org.uk",
+      "results": [
+        { "method": "cala", "tokensConsumed": 10, "citationReturned": false, "correct": true, "answerSummary": "knowledge_query returned a single row: National Lottery Community Fund.", "notes": "Correct and extremely compact (10 tokens), but knowledge_query returned no source URL and no supporting detail." },
+        { "method": "web-search", "tokensConsumed": 390, "citationReturned": true, "correct": true, "answerSummary": "The National Lottery Community Fund; plans to distribute over 4bn pounds by 2030.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "P8",
+      "question": "When must EU member states transpose the textile EPR rules in the revised Waste Framework Directive, and when must schemes be operational?",
+      "domain": "policy",
+      "groundTruth": "Directive (EU) 2025/1892 entered into force on 16 Oct 2025; member states must transpose within 20 months (by 17 June 2027) and have textile/footwear EPR schemes operational within 30 months (by 17 April 2028).",
+      "groundTruthSourceUrl": "https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en",
+      "results": [
+        { "method": "cala", "tokensConsumed": 207, "citationReturned": true, "correct": true, "answerSummary": "In force 16 Oct 2025; transpose by 17 June 2027 (20 months); schemes operational by 17 April 2028 (30 months).", "notes": "Correct, exact dates; cited. Current 2025 directive well covered, against ADR-003's expectation." },
+        { "method": "web-search", "tokensConsumed": 529, "citationReturned": true, "correct": true, "answerSummary": "In force 16 Oct 2025; transpose by 17 June 2027; schemes by 17 April 2028; micro-enterprises to 17 April 2029.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "P9",
+      "question": "How are social economy enterprises treated under the EU textile extended producer responsibility rules?",
+      "domain": "policy",
+      "groundTruth": "Social-economy enterprises in second-hand textile collection are exempt from EPR fee obligations, may run their own collection and keep what they collect (not required to hand it to the PRO), get equal or preferential collection-point access, and have residual waste managed at no cost by producers; they carry annual reporting duties.",
+      "groundTruthSourceUrl": "https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en",
+      "results": [
+        { "method": "cala", "tokensConsumed": 434, "citationReturned": true, "correct": true, "answerSummary": "Exempt from EPR fees, not required to hand textiles to the PRO, preferential collection-point access, free residual-waste collection, annual reporting; notes the industry controversy.", "notes": "Correct, thorough, cited EUR-Lex/Europarl/RREUSE. One of few questions where Cala's answer payload (434 tokens) exceeded the web block (422)." },
+        { "method": "web-search", "tokensConsumed": 422, "citationReturned": true, "correct": true, "answerSummary": "Social economy enterprises exempt from EPR obligations, may operate their own collection systems, textile waste managed at no cost.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "P10",
+      "question": "What are the CSRD reporting thresholds after the 2026 Omnibus directive?",
+      "domain": "policy",
+      "groundTruth": "After Directive (EU) 2026/470 (Omnibus I), mandatory CSRD applies only to companies exceeding BOTH more than 1,000 employees AND more than 450m euro net turnover.",
+      "groundTruthSourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2026/02/24/council-signs-off-simplification-of-sustainability-reporting-and-due-diligence-requirements-to-boost-eu-competitiveness/",
+      "results": [
+        { "method": "cala", "tokensConsumed": 328, "citationReturned": true, "correct": true, "answerSummary": "Both more than 1,000 employees AND more than 450m euro turnover (Dir (EU) 2026/470); ~80-90% of firms removed from scope; value-chain cap for suppliers of 1,000 or fewer.", "notes": "Correct and current; cited." },
+        { "method": "web-search", "tokensConsumed": 511, "citationReturned": true, "correct": true, "answerSummary": "More than 1,000 employees AND net turnover over 450m euro; in force 18 Mar 2026; applies from FY2027.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "P11",
+      "question": "Which EU regulation introduces the Digital Product Passport for textiles?",
+      "domain": "policy",
+      "groundTruth": "The Ecodesign for Sustainable Products Regulation (ESPR), Regulation (EU) 2024/1781, introduces the Digital Product Passport; textiles are a priority product group, with the textile DPP expected around 2027.",
+      "groundTruthSourceUrl": "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en",
+      "results": [
+        { "method": "cala", "tokensConsumed": 251, "citationReturned": true, "correct": true, "answerSummary": "ESPR, Regulation (EU) 2024/1781; mandatory DPP for textiles; DPP requirements expected around 2027.", "notes": "Correct and cited." },
+        { "method": "web-search", "tokensConsumed": 513, "citationReturned": true, "correct": true, "answerSummary": "ESPR (EU) 2024/1781, in force 18 July 2024; textiles a priority group; DPP mandatory ~2027 via a delegated act.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "P12",
+      "question": "When does the EU ban on destroying unsold textiles take effect for large companies?",
+      "domain": "policy",
+      "groundTruth": "Under the ESPR, large companies are banned from destroying unsold textiles and footwear from 19 July 2026 (medium-sized companies from 2030).",
+      "groundTruthSourceUrl": "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en",
+      "results": [
+        { "method": "cala", "tokensConsumed": 221, "citationReturned": true, "correct": true, "answerSummary": "From 19 July 2026 for large companies (from 19 July 2030 for medium-sized); implementing measures adopted 9 Feb 2026.", "notes": "Correct and cited to cms.law." },
+        { "method": "web-search", "tokensConsumed": 484, "citationReturned": true, "correct": true, "answerSummary": "From 19 July 2026 for large companies; medium-sized from 2030; disclosure format from Feb 2027.", "notes": "Correct and cited, including the EU Commission application-date page." }
+      ]
+    },
+    {
+      "id": "P13",
+      "question": "What years does the EU Social Economy Action Plan cover?",
+      "domain": "policy",
+      "groundTruth": "The EU Social Economy Action Plan (adopted Dec 2021) has a nine-year horizon to 2030 (2021-2030), with a mid-term review in 2025.",
+      "groundTruthSourceUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52021DC0778",
+      "results": [
+        { "method": "cala", "tokensConsumed": 68, "citationReturned": true, "correct": true, "answerSummary": "2021 to 2030 (nine-year horizon); 38 actions; evaluation planned for 2025.", "notes": "Correct and very compact. Revealed a console-data error (the policy signal said 2021-2026)." },
+        { "method": "web-search", "tokensConsumed": 441, "citationReturned": true, "correct": true, "answerSummary": "Adopted 9 Dec 2021; actions for 2021-2030, nine-year horizon to 2030; mid-term review published.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "PA14",
+      "question": "What is Primark's published value-chain carbon reduction target?",
+      "domain": "partners",
+      "groundTruth": "Primark (Primark Cares) commits to halve carbon emissions across its value chain (Scopes 1-3) by 2030 versus an FY2018/19 baseline; the target is SBTi-validated.",
+      "groundTruthSourceUrl": "https://sr.primark.com/planet",
+      "results": [
+        { "method": "cala", "tokensConsumed": 216, "citationReturned": true, "correct": true, "answerSummary": "Halve absolute Scopes 1-3 emissions by 2030 vs FY2018/19; SBTi-validated (2023); 1.9% cut achieved to date.", "notes": "Correct and cited." },
+        { "method": "web-search", "tokensConsumed": 407, "citationReturned": true, "correct": true, "answerSummary": "Halve value-chain carbon by 2030 from a 2019 base; SBTi Scope 1-2 aligned to 1.5C; net zero no later than 2050.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "PA15",
+      "question": "What is the ultimate parent company of Primark?",
+      "domain": "partners",
+      "groundTruth": "Primark's ultimate parent is Associated British Foods plc (ABF), itself majority-controlled by the Weston family's Wittington Investments; ABF plans to demerge Primark by end 2027.",
+      "groundTruthSourceUrl": "https://www.abf.co.uk/responsibility/responsibility-in-our-businesses/retail",
+      "results": [
+        { "method": "cala", "tokensConsumed": 114, "citationReturned": true, "correct": true, "answerSummary": "Associated British Foods (ABF), controlled by the Weston family's Wittington Investments; ABF plans to demerge Primark by end 2027.", "notes": "Correct, resolves the full ownership chain to the ultimate parent, and current on the April 2026 demerger news." },
+        { "method": "web-search", "tokensConsumed": 361, "citationReturned": true, "correct": true, "answerSummary": "Associated British Foods; Weston family maintains effective control; demerger to a standalone listing by end 2027.", "notes": "Correct; names ABF and Weston control." }
+      ]
+    },
+    {
+      "id": "PA16",
+      "question": "What is Marks and Spencer's net-zero target year under Plan A?",
+      "domain": "partners",
+      "groundTruth": "M&S (Plan A) targets net zero across its value chain by 2040; SBTi-validated.",
+      "groundTruthSourceUrl": "https://corporate.marksandspencer.com/esg/our-approach-to-net-zero",
+      "results": [
+        { "method": "cala", "tokensConsumed": 159, "citationReturned": true, "correct": true, "answerSummary": "2040 (net zero across operations and value chain); SBTi-validated; interim 50% cut by 2030.", "notes": "Correct and cited." },
+        { "method": "web-search", "tokensConsumed": 385, "citationReturned": true, "correct": true, "answerSummary": "Net zero by 2040 across the value chain; interim 34% by 2025 and 55% by 2030; SBTi-validated.", "notes": "Correct; interim 2030 figure differs slightly from Cala's (55% vs 50%), headline year agrees." }
+      ]
+    },
+    {
+      "id": "PA17",
+      "question": "Approximately how many employees does H&M Group have?",
+      "domain": "partners",
+      "groundTruth": "H&M Group employed roughly 132,000 total (about 94,700 average FTE) in FY2025 (year to 30 Nov 2025).",
+      "groundTruthSourceUrl": "https://hmgroup.com/wp-content/uploads/2026/03/HM-Group-Annual-and-sustainability-report-2025.pdf",
+      "results": [
+        { "method": "cala", "tokensConsumed": 109, "citationReturned": true, "correct": true, "answerSummary": "~132,403 total employees at 30 Nov 2025 (63,292 FT, 69,111 PT); ~94,744 average FTE for FY2025.", "notes": "Correct, current and precise on both total and average headcount." },
+        { "method": "web-search", "tokensConsumed": 326, "citationReturned": true, "correct": true, "answerSummary": "~94,744 average FTE for FY2025; notes sources vary between FTE and total headcount.", "notes": "Correct on the average FTE; did not surface the ~132k total that Cala gave." }
+      ]
+    },
+    {
+      "id": "PA18",
+      "question": "What are Analog Devices' commitments on waste reduction and community investment?",
+      "domain": "partners",
+      "groundTruth": "Analog Devices reports about 90% waste diversion (2022; targeting 100% landfill diversion by 2030) and community investment via the Analog Devices Foundation and local giving including Limerick.",
+      "groundTruthSourceUrl": "https://www.analog.com/en/about-adi/corporate-responsibility.html",
+      "results": [
+        { "method": "cala", "tokensConsumed": 274, "citationReturned": true, "correct": true, "answerSummary": "90% waste diversion (2022), target 100% by 2030; ADI Foundation (825+ grants); Limerick ~170,000 euro to 20+ local orgs; employee donation matching.", "notes": "Correct and granular; cited. Note the console-data partner figure (2m euro / 900+ orgs) is not corroborated here and is worth re-checking." },
+        { "method": "web-search", "tokensConsumed": 447, "citationReturned": true, "correct": true, "answerSummary": "90% waste diversion (2022), 95% (2024), target 100% by 2030; 54% renewable electricity (2022); DEI commitments.", "notes": "Correct; slightly more current on the 2024 95% figure." }
+      ]
+    },
+    {
+      "id": "PA19",
+      "question": "How often does H&M Group review its sustainability policy?",
+      "domain": "partners",
+      "groundTruth": "H&M Group reviews its sustainability/environmental policy annually (Environmental Policy, effective 1 Nov 2023).",
+      "groundTruthSourceUrl": "https://hmgroup.com/wp-content/uploads/2023/12/HM-Group-Environmental-Policy-231101.pdf",
+      "results": [
+        { "method": "cala", "tokensConsumed": 79, "citationReturned": true, "correct": true, "answerSummary": "Yearly; per the Environmental Policy effective 1 Nov 2023, H&M revises priorities annually.", "notes": "Correct and compact; cited the policy PDF directly." },
+        { "method": "web-search", "tokensConsumed": 267, "citationReturned": true, "correct": true, "answerSummary": "Yearly; Sustainability Commitment reviewed on a yearly basis, latest update 2022.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "I20",
+      "question": "What is the range of CO2e avoided per kilogram of clothing reused, and what drives the variation?",
+      "domain": "impact",
+      "groundTruth": "Estimates span a wide range (roughly 3 to 32 kg CO2e per kg) depending on substitution rate, fibre, transport and system boundary; there is no single figure.",
+      "groundTruthSourceUrl": "https://circulareconomy.europa.eu/platform/sites/default/files/2023-02/LCA-based%20assessment%20of%20the%20management%20of%20European%20used%20textiles_corrected.pdf",
+      "results": [
+        { "method": "cala", "tokensConsumed": 312, "citationReturned": true, "correct": true, "answerSummary": "Roughly 5.8 to 32 kg CO2e per kg depending on fibre, reuse pathway and whether compared to virgin production or disposal.", "notes": "Correct on the wide, boundary-dependent range; cited peer-reviewed LCAs (different studies from the console figure, same conclusion)." },
+        { "method": "web-search", "tokensConsumed": 452, "citationReturned": true, "correct": true, "answerSummary": "25 kg/kg (UPC), 3.169 (EU estimate), 6.1 kg/kg-collected, 32 kg overseas reuse; varies by method and assumptions.", "notes": "Correct on the range and drivers; cited." }
+      ]
+    },
+    {
+      "id": "I21",
+      "question": "What is a typical Social Return on Investment ratio for social inclusion projects?",
+      "domain": "impact",
+      "groundTruth": "Reported SROI ratios vary widely; a commonly cited typical range for social-inclusion work is about 3 to 8 pounds of social value per 1 pound, with individual studies ranging far wider.",
+      "groundTruthSourceUrl": "https://www.socialvalueint.org/guide-to-sroi",
+      "results": [
+        { "method": "cala", "tokensConsumed": 318, "citationReturned": true, "correct": true, "answerSummary": "Typically 2:1 to 8:1, commonly 1.2:1 to 14:1; examples 3.69-6.97:1, 3.20:1, up to 17:1; highly assumption-sensitive.", "notes": "Correct with the sensitivity caveat; cited multiple studies." },
+        { "method": "web-search", "tokensConsumed": 374, "citationReturned": true, "correct": true, "answerSummary": "Examples 9.14:1 and 3.78:1; a common 3:1 benchmark; range likely 3.95-5.71 in one analysis.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "I22",
+      "question": "How much CO2e does a whole-house deep retrofit save per home each year?",
+      "domain": "impact",
+      "groundTruth": "A whole-house deep energy retrofit typically saves on the order of 2 to 7 tonnes CO2e per home per year (roughly a 50 to 70 percent cut), depending on fuel, size and climate.",
+      "groundTruthSourceUrl": "https://eta.lbl.gov/publications/deep-energy-retrofit-performance-metr",
+      "results": [
+        { "method": "cala", "tokensConsumed": 323, "citationReturned": true, "correct": true, "answerSummary": "Roughly 2-7 tonnes CO2e per home per year (50-70% cut); Irish schemes ~1.4 t; Canadian cases 5-7 t.", "notes": "Correct with a well-bounded range; cited LBNL and an Irish audit report." },
+        { "method": "web-search", "tokensConsumed": 427, "citationReturned": true, "correct": true, "answerSummary": "~4.2-4.8 t (meta-analysis and a Guelph case); up to 23.87 t for a gas home; flags a 400 t figure as commercial.", "notes": "Correct for single-family homes; cited." }
+      ]
+    },
+    {
+      "id": "I23",
+      "question": "What median return on investment has a systematic review found across public health prevention interventions?",
+      "domain": "impact",
+      "groundTruth": "A systematic review (Masters et al., 2017, Journal of Epidemiology and Community Health) found a median ROI of 14.3:1 for public health interventions (4.1:1 local, 27.2:1 national).",
+      "groundTruthSourceUrl": "https://jech.bmj.com/content/71/8/827",
+      "results": [
+        { "method": "cala", "tokensConsumed": 275, "citationReturned": true, "correct": true, "answerSummary": "Median ROI 14.3:1 (Masters et al. 2017); local 4.1:1, national 27.2:1; adds the interpretation caveat that it is not all cash.", "notes": "Correct, exact, and adds the King's Fund-style nuance; cited JECH/PubMed." },
+        { "method": "web-search", "tokensConsumed": 308, "citationReturned": true, "correct": true, "answerSummary": "Median ROI 14.3:1 across 52 studies; local 4.1:1, national 27.2:1.", "notes": "Correct and cited to the same review." }
+      ]
+    },
+    {
+      "id": "I24",
+      "question": "Why should clothing reuse life cycle assessments not assume one-for-one substitution?",
+      "domain": "impact",
+      "groundTruth": "Because measured displacement rates are well below 100% (often ~45-70%); the substitution factor is a dominant LCA variable, and assuming 1:1 overstates the environmental benefit.",
+      "groundTruthSourceUrl": "https://krex.k-state.edu/items/e663805f-eb4f-432e-9a3e-a2b92ead8fa0",
+      "results": [
+        { "method": "cala", "tokensConsumed": 379, "citationReturned": true, "correct": true, "answerSummary": "Empirical substitution ~45-68%, impulse/additive buying, the secondhand paradox, and 64% of LCAs assume 1:1 without basis; still beneficial but the credit is overstated.", "notes": "Correct and comprehensive; cited." },
+        { "method": "web-search", "tokensConsumed": 437, "citationReturned": true, "correct": true, "answerSummary": "Substitution below 1:1 (US ~67.8%); displacement varies by model; secondhand does not fully replace new.", "notes": "Correct and cited." }
+      ]
+    },
+    {
+      "id": "I25",
+      "question": "How does arts participation affect wellbeing and self-reported health?",
+      "domain": "impact",
+      "groundTruth": "A large evidence base (including the WHO 2019 review) links arts participation to better mental wellbeing, higher life satisfaction and improved self-reported health, via social, psychological and physical pathways.",
+      "groundTruthSourceUrl": "https://iris.who.int/items/ba079951-0beb-4b7f-a1c5-a75cc66c283e",
+      "results": [
+        { "method": "cala", "tokensConsumed": 335, "citationReturned": true, "correct": true, "answerSummary": "WHO 2019 review of 3,000+ studies; 23,000-person analysis links participation to lower distress and higher life satisfaction; positive self-reported health links and mechanisms.", "notes": "Correct and well-sourced; cited WHO and What Works Wellbeing." },
+        { "method": "web-search", "tokensConsumed": 390, "citationReturned": true, "correct": true, "answerSummary": "Mostly positive associations with wellbeing and self-rated health; bidirectional effects; performing arts benefit many domains; causality mixed.", "notes": "Correct and cited." }
+      ]
+    }
+  ]
+}

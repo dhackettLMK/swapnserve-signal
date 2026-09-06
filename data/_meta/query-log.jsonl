@@ -32,3 +32,28 @@
 {"at":"2026-09-06T12:06:00.000Z","tool":"entity_search","input":"Marks and Spencer [Company]","credits":1,"responseHash":"c7_ms_search"}
 {"at":"2026-09-06T12:07:00.000Z","tool":"entity_retrieval","input":"07094e1d H&M esg_policy,employee_count,hq","entityUuid":"07094e1d-776b-4ba7-9c97-f8e449e35cde","credits":1,"responseHash":"c8_hm_retrieve"}
 {"at":"2026-09-06T12:08:00.000Z","tool":"entity_retrieval","input":"f74a3409 M&S esg_policy,employee_count,hq","entityUuid":"f74a3409-dfb3-45e2-8528-4f9db698fce5","credits":1,"responseHash":"c9_ms_retrieve"}
+{"at":"2026-09-06T13:00:00.000Z","tool":"knowledge_search","input":"Who is eligible to apply for a European Solidarity Corps Solidarity Project?","credits":1,"responseHash":"bench_f1"}
+{"at":"2026-09-06T13:01:00.000Z","tool":"knowledge_search","input":"How much funding does Ireland's Circular Economy Innovation Grant Scheme provide?","credits":1,"responseHash":"bench_f2"}
+{"at":"2026-09-06T13:02:00.000Z","tool":"knowledge_query","input":"Which EU funding programmes accept applications from informal youth groups without a registered organisation?","credits":1,"responseHash":"bench_f3"}
+{"at":"2026-09-06T13:03:00.000Z","tool":"knowledge_search","input":"What is the maximum grant from Aktion Mensch in Germany?","credits":1,"responseHash":"bench_f4"}
+{"at":"2026-09-06T13:04:00.000Z","tool":"knowledge_search","input":"What is the largest national grant fund for Spain's Third Sector?","credits":1,"responseHash":"bench_f5"}
+{"at":"2026-09-06T13:05:00.000Z","tool":"knowledge_search","input":"Which French state fund supports small associations with project grants?","credits":1,"responseHash":"bench_f6"}
+{"at":"2026-09-06T13:06:00.000Z","tool":"knowledge_query","input":"What is the largest community grant funder in the United Kingdom?","credits":1,"responseHash":"bench_f7"}
+{"at":"2026-09-06T13:07:00.000Z","tool":"knowledge_search","input":"When must EU member states transpose the textile EPR rules in the revised Waste Framework Directive?","credits":1,"responseHash":"bench_p8"}
+{"at":"2026-09-06T13:08:00.000Z","tool":"knowledge_search","input":"How are social economy enterprises treated under the EU textile extended producer responsibility rules?","credits":1,"responseHash":"bench_p9"}
+{"at":"2026-09-06T13:09:00.000Z","tool":"knowledge_search","input":"What are the CSRD reporting thresholds after the 2026 Omnibus directive?","credits":1,"responseHash":"bench_p10"}
+{"at":"2026-09-06T13:10:00.000Z","tool":"knowledge_search","input":"Which EU regulation introduces the Digital Product Passport for textiles?","credits":1,"responseHash":"bench_p11"}
+{"at":"2026-09-06T13:11:00.000Z","tool":"knowledge_search","input":"When does the EU ban on destroying unsold textiles take effect for large companies?","credits":1,"responseHash":"bench_p12"}
+{"at":"2026-09-06T13:12:00.000Z","tool":"knowledge_search","input":"What years does the EU Social Economy Action Plan cover?","credits":1,"responseHash":"bench_p13"}
+{"at":"2026-09-06T13:13:00.000Z","tool":"knowledge_search","input":"What is Primark's published value-chain carbon reduction target?","credits":1,"responseHash":"bench_pa14"}
+{"at":"2026-09-06T13:14:00.000Z","tool":"knowledge_search","input":"What is the ultimate parent company of Primark?","credits":1,"responseHash":"bench_pa15"}
+{"at":"2026-09-06T13:15:00.000Z","tool":"knowledge_search","input":"What is Marks and Spencer's net zero target year under Plan A?","credits":1,"responseHash":"bench_pa16"}
+{"at":"2026-09-06T13:16:00.000Z","tool":"knowledge_search","input":"How many employees does H&M Group have?","credits":1,"responseHash":"bench_pa17"}
+{"at":"2026-09-06T13:17:00.000Z","tool":"knowledge_search","input":"What are Analog Devices' commitments on waste reduction and community investment?","credits":1,"responseHash":"bench_pa18"}
+{"at":"2026-09-06T13:18:00.000Z","tool":"knowledge_search","input":"How often does H&M Group review its sustainability policy?","credits":1,"responseHash":"bench_pa19"}
+{"at":"2026-09-06T13:19:00.000Z","tool":"knowledge_search","input":"What is the range of CO2e avoided per kilogram of clothing reused?","credits":1,"responseHash":"bench_i20"}
+{"at":"2026-09-06T13:20:00.000Z","tool":"knowledge_search","input":"What is a typical Social Return on Investment ratio for social inclusion projects?","credits":1,"responseHash":"bench_i21"}
+{"at":"2026-09-06T13:21:00.000Z","tool":"knowledge_search","input":"How much CO2e does a whole-house deep retrofit save per home each year?","credits":1,"responseHash":"bench_i22"}
+{"at":"2026-09-06T13:22:00.000Z","tool":"knowledge_search","input":"What is the median return on investment of public health prevention interventions?","credits":1,"responseHash":"bench_i23"}
+{"at":"2026-09-06T13:23:00.000Z","tool":"knowledge_search","input":"Why should clothing reuse life cycle assessments not assume one-for-one substitution?","credits":1,"responseHash":"bench_i24"}
+{"at":"2026-09-06T13:24:00.000Z","tool":"knowledge_search","input":"How does arts participation affect wellbeing and self-reported health?","credits":1,"responseHash":"bench_i25"}
