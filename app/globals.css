@@ -1,84 +1,217 @@
 @import "tailwindcss";
 
 /*
-  SIGNAL design system.
-  Editorial, high-contrast, monospace accents for the "every fact is traceable"
-  feel. Light + dark via prefers-color-scheme (manual toggle added in Phase 7).
-  Restrained green accent nods to the circular-economy subject.
+  SIGNAL: a committed dark, high-tech visual system.
+  Green on near-black, hairline structure, monospace instrumentation.
+  No glow blobs, no glassmorphism, no template card grids.
 */
 
 :root {
-  --background: #fbfbf9;
-  --foreground: #16181c;
-  --surface: #ffffff;
-  --surface-2: #f4f4f0;
-  --border: #e3e3dc;
-  --muted: #5c6067;
-  --accent: #1f6f52;
-  --accent-fg: #ffffff;
-  --accent-soft: #e5f0ea;
-  --warn: #9a5b00;
-  --warn-soft: #fbeecf;
-  --ring: #1f6f52;
-}
+  color-scheme: dark;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b0d10;
-    --foreground: #e8eaed;
-    --surface: #14171c;
-    --surface-2: #1b1f26;
-    --border: #2a2f38;
-    --muted: #9aa1ac;
-    --accent: #4bbd8f;
-    --accent-fg: #08130d;
-    --accent-soft: #123024;
-    --warn: #e0a24a;
-    --warn-soft: #33270f;
-    --ring: #4bbd8f;
-  }
+  --bg: #050706;
+  --panel: #0a0f0c;
+  --raised: #0f1613;
+  --line: #182019;
+  --line-2: #24312a;
+
+  --ink: #e6efe9;
+  --dim: #8a978f;
+  --faint: #55635b;
+
+  --signal: #35e08a;
+  --signal-2: #7cf0b6;
+  --signal-deep: #0c2c1e;
+  --warn: #e0a24a;
+
+  --grid: rgba(53, 224, 138, 0.045);
+  --radius: 4px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
-  --color-border: var(--border);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-accent-fg: var(--accent-fg);
-  --color-accent-soft: var(--accent-soft);
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-ink: var(--ink);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+  --color-signal: var(--signal);
+  --color-signal-2: var(--signal-2);
+  --color-signal-deep: var(--signal-deep);
   --color-warn: var(--warn);
-  --color-warn-soft: var(--warn-soft);
+
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+  --font-serif: var(--font-serif), Georgia, "Times New Roman", serif;
+}
+
+/* Italic serif accent word inside a sans display heading. */
+.accent-word {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--signal);
+}
+
+/* Dot-textured accent strip, drawn with gradients (no image). */
+.banner-dots {
+  background-color: #0a1a12;
+  background-image:
+    radial-gradient(circle at center, rgba(53, 224, 138, 0.55) 0.8px, transparent 1px),
+    linear-gradient(100deg, var(--signal-deep), transparent 62%);
+  background-size:
+    9px 9px,
+    100% 100%;
+}
+
+/* A deliberate, contained accent glow for primary controls. */
+.cta-glow {
+  box-shadow:
+    0 0 0 1px rgba(53, 224, 138, 0.35),
+    0 8px 30px -8px rgba(53, 224, 138, 0.5);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg);
+  /* Fine engineered grid, not a blurred light. */
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: var(--ink);
   font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--signal);
+  color: #04120b;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-/* Focus visibility for keyboard users (Phase 7 a11y groundwork). */
 :focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
+  outline: 1px solid var(--signal);
+  outline-offset: 3px;
 }
 
-/* Reusable pieces referenced across pages. */
-.mono {
+/* Monospace instrumentation label. */
+.tag {
   font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
 }
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
+/* A hairline panel. No heavy shadow, no rounded pill. */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Display headings: tight, confident. */
+.display {
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-weight: 600;
+}
+
+/* Scroll reveal. Progressive: content is visible if JS never runs. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Link underline that draws in from the left. */
+.link-underline {
+  background-image: linear-gradient(var(--signal), var(--signal));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  padding-bottom: 2px;
+}
+.link-underline:hover,
+.link-underline[data-active="true"] {
+  background-size: 100% 1px;
+}
+
+/* A slow blink for live status dots. */
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+.pulse {
+  animation: signal-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+.scan {
+  animation: scan 0.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .pulse,
+  .scan {
+    animation: none;
+  }
 }

@@ -73,9 +73,20 @@ honestly on `/how-it-works` rather than hidden.
 
 ## ADR-004 — Funding fit score rubric
 
-**Status:** placeholder (defined in Phase 3)
+**Status:** accepted (2026-09-06)
 
-The `fitScore` (0–100) on each `FundingOpportunity` will be a documented,
-transparent rubric — weighting eligibility for an unincorporated body,
-geography, amount vs effort, deadline proximity, and youth-led fit. Written up
-in full here when Phase 3 lands, so no number is a black box.
+The `fitScore` (0–100) on each `FundingOpportunity` is a transparent weighted
+sum, so no ranking is a black box:
+
+- **Eligibility for an unincorporated body (0–35).** Full marks if an
+  unincorporated group can apply directly; part marks if a light constituted
+  group suffices; zero if a legal entity or charity status is mandatory.
+- **Cause and theme fit (0–25).** Higher when textiles, reuse or circular
+  economy is a named priority.
+- **Amount vs effort (0–20).** Grant size against the likely application burden.
+- **Youth-led fit (0–10).** Higher for schemes aimed at young people.
+- **Deadline workability (0–10).** Higher when a round is open or predictable.
+
+Worked example: CEIGS scores 85 (community-eligible, textiles a named theme,
+€40–50k, annual). EPA Green Enterprise scores 64 (usually needs a constituted
+entity, competitive). Scores are recomputed by hand when a fund's facts change.

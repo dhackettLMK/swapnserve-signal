@@ -1,3 +1,40 @@
 {
-  "gaps": []
+  "gaps": [
+    {
+      "id": "esg-policy-uneven",
+      "domain": "partners",
+      "summary": "The esg_policy property is richly populated for some companies (Primark) but empty for others (Analog Devices Inc), so entity coverage of sustainability commitments is uneven.",
+      "reproducibleQuery": "entity_retrieval on 7a17ad96-4bbf-474f-a6e9-1cf4e5da84e3 with properties [esg_policy, employee_count] returns neither.",
+      "calaTool": "entity_retrieval",
+      "observedAt": "2026-09-06T10:04:00.000Z",
+      "detail": "Workaround: fall back to knowledge_search for the company's commitments, which did return a well-sourced answer for Analog Devices."
+    },
+    {
+      "id": "no-irish-site-entity",
+      "domain": "partners",
+      "summary": "Cala models the corporate parent (Analog Devices Inc) but not the Irish operating site in Limerick as its own entity, so Mid-West presence cannot be read from the graph.",
+      "reproducibleQuery": "entity_search 'Analog Devices' returns the US parent and foreign subsidiaries, no Limerick/Raheen site entity.",
+      "calaTool": "entity_search",
+      "observedAt": "2026-09-06T10:03:00.000Z",
+      "detail": "Mid-West presence was verified from a primary source (limerick.ie) instead."
+    },
+    {
+      "id": "compound-questions-rejected",
+      "domain": "general",
+      "summary": "knowledge_search rejects compound, multi-clause questions with a 'too complex' message, which still costs a credit.",
+      "reproducibleQuery": "knowledge_search: 'What sustainability, circular economy or community investment commitments has Analog Devices published, with document titles and years, particularly relating to Ireland or Limerick?'",
+      "calaTool": "knowledge_search",
+      "observedAt": "2026-09-06T10:05:00.000Z",
+      "detail": "Decomposing into a single-clause question ('What are Analog Devices' published environmental sustainability commitments?') returned a rich, well-sourced answer."
+    },
+    {
+      "id": "funders-not-entities",
+      "domain": "funding",
+      "summary": "Irish grant programmes are not modelled as first-class entities (there is no funding-scheme entity type), so funding relied on knowledge_search plus primary-source verification rather than the entity workflow.",
+      "reproducibleQuery": "entity_search has no entity_type for grant programmes; 'Circular Economy Innovation Grant Scheme' surfaces only via knowledge_search context.",
+      "calaTool": "entity_search",
+      "observedAt": "2026-09-06T10:07:00.000Z",
+      "detail": "knowledge_search returned excellent, gov.ie-sourced funding detail, so the gap is in the entity model, not the underlying knowledge."
+    }
+  ]
 }

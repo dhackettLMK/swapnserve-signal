@@ -1,1 +1,151 @@
-[]
+[
+  {
+    "id": "primark",
+    "legalName": "Primark Limited (Penneys)",
+    "calaEntityUuid": "4186dc73-fcec-4932-8aea-d658d3a420fd",
+    "midWestPresence": {
+      "value": { "sites": ["Dublin HQ (Arthur Ryan House)", "Nationwide retail, including Limerick"], "approxHeadcount": 48064 },
+      "provenance": {
+        "calaTool": "entity_retrieval",
+        "input": "entity 4186dc73 properties[headquarters_address, employee_count]",
+        "entityUuid": "4186dc73-fcec-4932-8aea-d658d3a420fd",
+        "sourceUrls": ["https://search.gleif.org/#/record/21380028ZBNXSR21LL96", "https://www.reveliolabs.com/companies/primark/employees/"],
+        "sourceTitles": ["GLEIF LEI record", "Revelio Labs employee estimate"],
+        "retrievedAt": "2026-09-06T10:02:00.000Z",
+        "creditsSpent": 1,
+        "confidence": "single-source",
+        "verifierNote": "HQ and headcount from Cala-sourced records; Limerick retail presence is general public knowledge, not entity-sourced."
+      }
+    },
+    "csrdStatus": {
+      "value": "in-scope",
+      "provenance": {
+        "calaTool": "entity_retrieval",
+        "input": "Primark parent chain (Wittington Investments)",
+        "entityUuid": "4186dc73-fcec-4932-8aea-d658d3a420fd",
+        "sourceUrls": ["https://search.gleif.org/#/record/21380028ZBNXSR21LL96"],
+        "retrievedAt": "2026-09-06T10:02:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "inferred",
+        "verifierNote": "Part of the Wittington/ABF group, which exceeds the post-Omnibus CSRD thresholds. Attributed inference, not a filing."
+      }
+    },
+    "commitments": [
+      {
+        "value": {
+          "quote": "an environmental sustainability strategy that aims to halve carbon emissions by 2030 across the entire value chain, focusing on raw-material sourcing, recycling and circular design",
+          "theme": "circularity",
+          "documentTitle": "Primark sustainability approach (Primark Cares)",
+          "documentYear": 2025
+        },
+        "provenance": {
+          "calaTool": "entity_retrieval",
+          "input": "entity 4186dc73 properties[esg_policy]",
+          "entityUuid": "4186dc73-fcec-4932-8aea-d658d3a420fd",
+          "sourceUrls": ["https://sr.primark.com/sustainability-approach", "https://corporate.primark.com/en-us/a/primark-cares/our-approach/protecting-our-planet"],
+          "sourceTitles": ["Primark sustainability approach", "Primark Cares: protecting our planet"],
+          "retrievedAt": "2026-09-06T10:02:00.000Z",
+          "creditsSpent": 0,
+          "confidence": "verified",
+          "verifierNote": "esg_policy field returned by Cala, cited to Primark's own published pages."
+        }
+      }
+    ],
+    "eprExposure": {
+      "value": "textile-producer",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Directive (EU) 2025/1892, textile EPR scope: producers placing textiles on the market",
+        "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"],
+        "sourceTitles": ["Revised Waste Framework Directive enters into force (EU Commission)"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified",
+        "verifierNote": "As a clothing retailer placing textiles on the Irish market, Primark falls within the producer definition set to be obligated under the Irish textile EPR scheme."
+      }
+    },
+    "angle": "Primark places large volumes of textiles on the Irish market, so from 2028 it becomes a fee-paying producer under the textile EPR scheme. A relationship built now, whilst Ireland designs its scheme, positions Swap'n'Serve as an established reuse counterparty rather than a 2028 cold approach.",
+    "tier": 1,
+    "status": "researched"
+  },
+  {
+    "id": "analog-devices",
+    "legalName": "Analog Devices, Inc.",
+    "calaEntityUuid": "7a17ad96-4bbf-474f-a6e9-1cf4e5da84e3",
+    "midWestPresence": {
+      "value": { "sites": ["Raheen, Limerick", "Cork", "Dublin"] },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What are Analog Devices' published environmental sustainability commitments?",
+        "sourceUrls": ["https://www.limerick.ie/business/news-events/news/analog-devices-wins-gold-for-exemplary-sustainability-practices"],
+        "sourceTitles": ["Analog Devices wins gold for sustainability (Limerick.ie)"],
+        "retrievedAt": "2026-09-06T10:06:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified",
+        "verifierNote": "Lean Business Ireland award recognised ADI's sites in Limerick, Cork and Dublin. Cala did not model the Irish site as its own entity (coverage gap)."
+      }
+    },
+    "csrdStatus": {
+      "value": "value-chain-pressure",
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "Analog Devices ESG reporting standards",
+        "sourceUrls": ["https://www.sustainabilityreports.com/analog-devices/2022/esg-report"],
+        "retrievedAt": "2026-09-06T10:06:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "inferred",
+        "verifierNote": "US multinational reporting to GRI/SASB/TCFD; its EU operations face value-chain data requests. Attributed inference."
+      }
+    },
+    "commitments": [
+      {
+        "value": {
+          "quote": "a 90% waste diversion rate from landfills and 54% renewable energy use across global manufacturing (2022)",
+          "theme": "waste",
+          "documentTitle": "Analog Devices 2022 Sustainability Report (ADI Horizon)",
+          "documentYear": 2022
+        },
+        "provenance": {
+          "calaTool": "knowledge_search",
+          "input": "What are Analog Devices' published environmental sustainability commitments?",
+          "sourceUrls": ["https://www.sustainabilityreports.com/analog-devices/2022/esg-report"],
+          "sourceTitles": ["Analog Devices Inc 2022 Sustainability Report"],
+          "retrievedAt": "2026-09-06T10:06:00.000Z",
+          "creditsSpent": 1,
+          "confidence": "verified"
+        }
+      },
+      {
+        "value": {
+          "quote": "$2 million in employee donations and foundation matches supporting over 900 community organisations",
+          "theme": "community",
+          "documentTitle": "Analog Devices 2022 Sustainability Report (ADI Horizon)",
+          "documentYear": 2022
+        },
+        "provenance": {
+          "calaTool": "knowledge_search",
+          "input": "What are Analog Devices' published environmental sustainability commitments?",
+          "sourceUrls": ["https://www.sustainabilityreports.com/analog-devices/2022/esg-report"],
+          "sourceTitles": ["Analog Devices Inc 2022 Sustainability Report"],
+          "retrievedAt": "2026-09-06T10:06:00.000Z",
+          "creditsSpent": 0,
+          "confidence": "verified"
+        }
+      }
+    ],
+    "eprExposure": {
+      "value": "none",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Textile EPR scope excludes semiconductor manufacturers",
+        "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified"
+      }
+    },
+    "angle": "Analog Devices runs a major Limerick operation, gives at scale to community organisations (over 900, with foundation matching), and has been recognised locally for sustainability. That mix of local footprint, community giving and a waste-diversion story makes it a natural corporate supporter or in-kind partner for Swap'n'Serve events in Limerick.",
+    "tier": 2,
+    "status": "researched"
+  }
+]

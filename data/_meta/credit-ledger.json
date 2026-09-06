@@ -1,5 +1,16 @@
 {
   "budgetPerMonth": 100,
-  "totalCredits": 0,
-  "entries": []
+  "totalCredits": 10,
+  "entries": [
+    { "at": "2026-09-06T10:00:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Primark to a Cala entity (textile-obligated producer)", "phase": "1-recon" },
+    { "at": "2026-09-06T10:01:00.000Z", "tool": "entity_introspection", "credits": 1, "purpose": "Learn the Company field schema before retrieval", "phase": "1-recon" },
+    { "at": "2026-09-06T10:02:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "Primark typed data + esg_policy + parent", "phase": "2-partners", "outputPath": "data/partners/targets.json" },
+    { "at": "2026-09-06T10:03:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Analog Devices (Mid-West employer)", "phase": "2-partners" },
+    { "at": "2026-09-06T10:04:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "Analog Devices Inc typed data (thin: no esg_policy)", "phase": "2-partners", "outputPath": "data/partners/targets.json" },
+    { "at": "2026-09-06T10:05:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Analog Devices commitments (compound query rejected)", "phase": "2-partners" },
+    { "at": "2026-09-06T10:06:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Analog Devices environmental commitments (cited)", "phase": "2-partners", "outputPath": "data/partners/targets.json" },
+    { "at": "2026-09-06T10:07:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Irish community reuse / circular economy grants", "phase": "3-funding", "outputPath": "data/funding/opportunities.json" },
+    { "at": "2026-09-06T10:08:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Textile EPR requirements, revised Waste Framework Directive", "phase": "4-policy", "outputPath": "data/policy/milestones.json" },
+    { "at": "2026-09-06T10:09:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Clothing reuse carbon savings per kg (LCA)", "phase": "5-impact", "outputPath": "data/impact/factors.json" }
+  ]
 }

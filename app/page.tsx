@@ -1,95 +1,127 @@
 import Link from "next/link";
 import { NAV } from "@/lib/nav";
+import { Reveal } from "@/components/Reveal";
 import { CreditMeter } from "@/components/CreditMeter";
+import { AnalysisConsole } from "@/components/AnalysisConsole";
+import { loadCreditLedger, loadEvidence } from "@/lib/data";
+
+const PRINCIPLES = [
+  {
+    t: "Every reading carries its source",
+    d: "Nothing is shown without provenance: the source, the Cala tool that produced it, and a confidence label. If it cannot be traced, it is not shown.",
+  },
+  {
+    t: "No invented numbers",
+    d: "Amounts and deadlines are never asserted without a verified source. An honest gap beats a figure a funder's due diligence would catch.",
+  },
+  {
+    t: "Metered against a credit budget",
+    d: "Cached example organisations cost nothing to explore. Live runs are metered and degrade to a cached report when the daily budget is reached.",
+  },
+];
 
 export default function Home() {
+  const ledger = loadCreditLedger();
+  const sources = loadEvidence().length;
+
   return (
-    <div className="space-y-16">
+    <div className="space-y-24">
       {/* Hero */}
-      <section className="pt-6">
-        <p className="mono mb-4 text-xs uppercase tracking-widest text-accent">
-          Swap&rsquo;n&rsquo;Serve · Limerick, Ireland
-        </p>
-        <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-          The intelligence layer for a clothing-reuse initiative that intends to still be here in
-          2028.
+      <section className="pt-2">
+        <Link
+          href="#console"
+          className="banner-dots group inline-flex items-center gap-2 rounded-[8px] border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-signal-2"
+        >
+          Worked example: Swap&rsquo;n&rsquo;Serve, Limerick
+          <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+        </Link>
+
+        <h1 className="display mt-7 max-w-4xl text-[2.6rem] leading-[1.04] sm:text-[4rem]">
+          The opportunities your nonprofit is missing, found and{" "}
+          <span className="accent-word">sourced</span>.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted">
-          From ~2028, EU law obliges clothing producers to fund exactly the textile diversion
-          Swap&rsquo;n&rsquo;Serve already does for free — and explicitly protects social-economy
-          operators. Signal exists to make Swap&rsquo;n&rsquo;Serve the organisation that is already
-          measuring, already known, and already at the table when Ireland stands up its textile
-          scheme.
+
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-dim sm:text-lg">
+          Enter a country, a cause, and a legal status. Signal uses Cala to read back the funding an
+          organisation can actually apply for, the regulation heading its way, the partners worth
+          approaching, and how to frame its impact. Every item carries its source. Shown here on
+          Swap&rsquo;n&rsquo;Serve, a Limerick clothing-reuse initiative.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/policy"
-            className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-fg transition-opacity hover:opacity-90"
-          >
-            The 2028 argument
-          </Link>
-          <Link
-            href="/how-it-works"
-            className="rounded-lg border border-border px-4 py-2 text-sm font-medium transition-colors hover:border-accent"
-          >
-            How it&rsquo;s built
-          </Link>
+
+        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
+          <span>Built on Cala</span>
+          <span className="text-line-2">|</span>
+          <span>{ledger.totalCredits}/{ledger.budgetPerMonth} credits used</span>
+          <span className="text-line-2">|</span>
+          <span>{sources} sources catalogued</span>
         </div>
       </section>
 
-      {/* Thesis / provenance promise */}
-      <section className="grid gap-6 sm:grid-cols-3">
-        <ThesisCard title="Every fact carries its source">
-          Nothing renders without provenance: the source URL, the timestamp, which Cala tool
-          produced it, and — for companies — the entity UUID. If it can&rsquo;t be traced, it
-          isn&rsquo;t here.
-        </ThesisCard>
-        <ThesisCard title="No invented numbers">
-          Swap&rsquo;n&rsquo;Serve&rsquo;s own figures are shown as self-reported estimates. Impact
-          is a calculator with cited factors and honest uncertainty ranges — never a fabricated
-          total.
-        </ThesisCard>
-        <ThesisCard title="Built to a credit budget">
-          The site serves committed, cached data, so a page view costs zero Cala credits. Spend is
-          metered and shown in the open.
-        </ThesisCard>
+      {/* The tool */}
+      <section id="console" className="scroll-mt-28">
+        <Reveal>
+          <AnalysisConsole />
+        </Reveal>
       </section>
 
-      {/* Module grid */}
+      {/* How a reading is built */}
       <section>
-        <h2 className="mono text-xs uppercase tracking-widest text-muted">Modules</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NAV.filter((n) => !["/how-it-works", "/limitations"].includes(n.href)).map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="card group p-5 transition-colors hover:border-accent"
-            >
-              <div className="flex items-center justify-between">
-                <span className="font-medium">{item.label}</span>
-                <span className="text-muted transition-transform group-hover:translate-x-0.5">
-                  →
-                </span>
+        <Reveal>
+          <p className="tag">How every reading is built</p>
+        </Reveal>
+        <div className="mt-6 border-t border-line">
+          {PRINCIPLES.map((p, i) => (
+            <Reveal key={p.t} delay={i * 80}>
+              <div className="group grid gap-2 border-b border-line py-7 sm:grid-cols-[3rem_1fr] sm:gap-8">
+                <span className="font-mono text-sm text-faint">{String(i + 1).padStart(2, "0")}</span>
+                <div className="max-w-3xl">
+                  <h3 className="text-lg font-medium transition-colors group-hover:text-signal">
+                    {p.t}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-dim">{p.d}</p>
+                </div>
               </div>
-              <p className="mt-2 text-sm text-muted">{item.short}</p>
-            </Link>
+            </Reveal>
           ))}
         </div>
       </section>
 
-      {/* Credit meter */}
-      <section className="max-w-md">
-        <CreditMeter />
+      {/* Modules */}
+      <section>
+        <Reveal>
+          <p className="tag">The four readings, and the workings behind them</p>
+        </Reveal>
+        <div className="mt-6 border-t border-line">
+          {NAV.map((item, i) => (
+            <Reveal key={item.href} delay={i * 40}>
+              <Link
+                href={item.href}
+                className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-b border-line py-5 transition-colors hover:bg-raised"
+              >
+                <span className="font-mono text-sm text-faint">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-4">
+                  <span className="text-base font-medium transition-colors group-hover:text-signal">
+                    {item.label}
+                  </span>
+                  <span className="text-sm text-dim">{item.short}</span>
+                </span>
+                <span className="pr-2 text-dim transition-transform duration-300 group-hover:translate-x-1 group-hover:text-signal">
+                  &rarr;
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
       </section>
-    </div>
-  );
-}
 
-function ThesisCard({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div className="card p-5">
-      <h3 className="font-medium">{title}</h3>
-      <p className="mt-2 text-sm text-muted">{children}</p>
+      {/* Credits */}
+      <section className="max-w-md">
+        <Reveal>
+          <CreditMeter />
+        </Reveal>
+      </section>
     </div>
   );
 }

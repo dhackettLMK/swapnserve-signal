@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
  *  - the Cala key is read server-side only
  *
  * Phase 0: the endpoint exists, meters, and degrades honestly. It does not yet
- * spend credits — it returns a clear "live demo enabled in a later phase"
+ * spend credits. It returns a clear "live demo enabled in a later phase"
  * response so the contract and the honesty are demonstrable today.
  */
 
@@ -58,7 +58,7 @@ export async function POST(req: Request) {
     return NextResponse.json({
       degraded: true,
       message:
-        "Daily live-demo budget reached. Showing cached results instead — the live query resumes tomorrow.",
+        "Daily live-demo budget reached. Showing cached results instead. The live query resumes tomorrow.",
       creditsUsedToday,
       ceiling: DAILY_CREDIT_CEILING,
     });

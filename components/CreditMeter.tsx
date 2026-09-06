@@ -1,34 +1,18 @@
 import { loadCreditLedger } from "@/lib/data";
+import { CreditMeterView } from "./CreditMeterView";
 
 /**
- * The credit economy, made visible (BUILD_PROMPT.md §7.3, §11). Reads the
- * committed ledger — a page view costs zero credits, and here is the proof.
+ * Server wrapper: reads the committed ledger and hands the numbers to the
+ * animated client view. The point it makes (a page view costs zero credits)
+ * is proven by the fact the numbers come from a committed file, not a call.
  */
 export function CreditMeter({ compact = false }: { compact?: boolean }) {
   const ledger = loadCreditLedger();
-  const pct = Math.min(100, Math.round((ledger.totalCredits / ledger.budgetPerMonth) * 100));
-
   return (
-    <div className={compact ? "" : "card p-5"}>
-      <div className="flex items-baseline justify-between">
-        <span className="mono text-xs uppercase tracking-widest text-muted">Cala credits</span>
-        <span className="mono text-sm">
-          <span className="text-foreground">{ledger.totalCredits}</span>
-          <span className="text-muted"> / {ledger.budgetPerMonth}</span>
-        </span>
-      </div>
-      <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-surface-2">
-        <div
-          className="h-full rounded-full bg-accent transition-all"
-          style={{ width: `${pct}%` }}
-        />
-      </div>
-      {!compact ? (
-        <p className="mt-2 text-xs text-muted">
-          Free-tier budget. The public site serves committed, cached data, so browsing costs
-          nothing — credits are spent only during ingestion and the metered live demo.
-        </p>
-      ) : null}
-    </div>
+    <CreditMeterView
+      used={ledger.totalCredits}
+      budget={ledger.budgetPerMonth}
+      compact={compact}
+    />
   );
 }

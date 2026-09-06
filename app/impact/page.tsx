@@ -1,40 +1,91 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
-import { EmptyState } from "@/components/EmptyState";
-import { loadImpactFactors, loadSelfReported } from "@/lib/data";
+import { StatusLine } from "@/components/StatusLine";
+import { SpecList } from "@/components/SpecList";
+import { Reveal } from "@/components/Reveal";
+import { ProvenanceChip } from "@/components/ProvenanceChip";
+import { ImpactCalculator } from "@/components/ImpactCalculator";
+import { loadImpactFactors } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Impact" };
 
 export default function ImpactPage() {
   const factors = loadImpactFactors();
-  const selfReported = loadSelfReported();
 
   return (
     <div>
       <PageHeader
+        index="04"
         eyebrow="Defensible numbers"
         title="Impact calculator"
-        intro={
-          <>
-            Enter kilograms of clothing diverted; get CO₂e avoided, water saved, landfill diverted
-            and garments rehomed — as ranges, not point estimates. Every conversion factor states
-            its system boundary and substitution-rate assumption, because a reused garment only
-            avoids emissions if it displaces a new purchase, and never 1:1.
-          </>
-        }
+        intro="Enter kilograms of clothing diverted and read back the carbon avoided as a range, not a single figure. Every factor states its system boundary and substitution assumption, because a reused garment only avoids emissions if it displaces a new purchase, and never one for one."
       />
-      {factors.length === 0 && !selfReported ? (
-        <EmptyState
-          phase="Phase 5"
-          building="Conversion factors are drawn from peer-reviewed LCAs (e.g. Sandin & Peters) and cross-checked against WRAP, EEA and JRC primary sources — never a single secondary source. Swap'n'Serve's own kg/events figures will appear as clearly labelled self-reported estimates from swapnserve.com."
-        >
-          Acceptance bar: ≥4 factors, each with methodology URL, year, geography, boundary and
-          uncertainty; a calculator that shows ranges; a plain-English &ldquo;how we calculate
-          this&rdquo; a funder could audit.
-        </EmptyState>
+
+      {factors.length === 0 ? (
+        <>
+          <div className="mt-8">
+            <StatusLine phase="PHASE 5" state="awaiting cited factors" />
+          </div>
+          <SpecList
+            label="What this module delivers"
+            items={[
+              { k: "Cited factors", v: "Conversion factors from peer-reviewed life-cycle studies." },
+              { k: "Stated assumptions", v: "System boundary and substitution rate on every factor." },
+              { k: "Ranges, not points", v: "Each output shown with an honest uncertainty range." },
+            ]}
+          />
+        </>
       ) : (
-        <p className="mt-8 text-muted">{factors.length} factors loaded.</p>
+        <div className="mt-10 space-y-10">
+          <Reveal>
+            <ImpactCalculator />
+          </Reveal>
+
+          <section>
+            <Reveal>
+              <p className="tag">The factors behind the calculator</p>
+            </Reveal>
+            <div className="mt-4 space-y-4">
+              {factors.map((f, i) => (
+                <Reveal key={f.id} delay={i * 50}>
+                  <article className="panel p-5">
+                    <div className="flex flex-wrap items-baseline justify-between gap-3">
+                      <h2 className="max-w-xl text-base font-medium">{f.label}</h2>
+                      <span className="font-mono text-lg text-signal tabular-nums">
+                        {f.value.value} <span className="text-xs text-dim">{f.unit}</span>
+                      </span>
+                    </div>
+                    <dl className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+                      <Row k="Geography" v={f.geography} />
+                      <Row k="Year" v={String(f.year)} />
+                      <Row k="System boundary" v={f.systemBoundary} />
+                      {typeof f.substitutionRate === "number" ? (
+                        <Row k="Substitution rate" v={`${f.substitutionRate} (full displacement)`} />
+                      ) : null}
+                      <Row k="Uncertainty" v={f.uncertainty} />
+                    </dl>
+                    <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-line pt-3">
+                      <a href={f.methodologyUrl} target="_blank" rel="noreferrer" className="font-mono text-[11px] text-signal">
+                        methodology
+                      </a>
+                      <ProvenanceChip provenance={f.value.provenance} />
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+        </div>
       )}
+    </div>
+  );
+}
+
+function Row({ k, v }: { k: string; v: string }) {
+  return (
+    <div className="grid grid-cols-[9rem_1fr] gap-2">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">{k}</dt>
+      <dd className="text-sm text-dim">{v}</dd>
     </div>
   );
 }

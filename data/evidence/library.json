@@ -1,1 +1,133 @@
-[]
+[
+  {
+    "id": "ec-wfd-in-force",
+    "title": "Revised Waste Framework Directive enters into force",
+    "url": "https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en",
+    "publisher": "European Commission",
+    "publishedDate": "2025-10-16",
+    "kind": "government",
+    "usedBy": ["policy", "partners"],
+    "provenance": {
+      "calaTool": "primary-source",
+      "input": "Textile EPR obligations and social-economy exemption",
+      "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"],
+      "retrievedAt": "2026-09-06T10:08:00.000Z",
+      "creditsSpent": 0,
+      "confidence": "verified"
+    }
+  },
+  {
+    "id": "gov-ie-circular-textiles-roadmap",
+    "title": "National Policy Statement and Roadmap on Circular Textiles",
+    "url": "https://assets.gov.ie/static/documents/2c88b353/National_Policy_Statement_Roadmap_on_Circular_Textiles_FINAL_BRANDED.pdf",
+    "publisher": "Government of Ireland",
+    "kind": "legislation",
+    "usedBy": ["policy"],
+    "provenance": {
+      "calaTool": "knowledge_search",
+      "input": "Ireland transposition of textile EPR",
+      "sourceUrls": ["https://assets.gov.ie/static/documents/2c88b353/National_Policy_Statement_Roadmap_on_Circular_Textiles_FINAL_BRANDED.pdf"],
+      "retrievedAt": "2026-09-06T10:08:00.000Z",
+      "creditsSpent": 0,
+      "confidence": "verified"
+    }
+  },
+  {
+    "id": "gov-ie-ceigs",
+    "title": "Applications open for the 2025 Circular Economy Innovation Grant Scheme",
+    "url": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/applications-now-open-for-2025-circular-economy-innovation-grant-scheme",
+    "publisher": "Department of Climate, Energy and the Environment",
+    "kind": "government",
+    "usedBy": ["funding"],
+    "provenance": {
+      "calaTool": "knowledge_search",
+      "input": "Irish community reuse / circular economy grants",
+      "sourceUrls": ["https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/applications-now-open-for-2025-circular-economy-innovation-grant-scheme"],
+      "retrievedAt": "2026-09-06T10:07:00.000Z",
+      "creditsSpent": 1,
+      "confidence": "verified"
+    }
+  },
+  {
+    "id": "primark-sustainability-approach",
+    "title": "Primark sustainability approach (Primark Cares)",
+    "url": "https://sr.primark.com/sustainability-approach",
+    "publisher": "Primark",
+    "kind": "company-report",
+    "usedBy": ["partners"],
+    "provenance": {
+      "calaTool": "entity_retrieval",
+      "input": "entity 4186dc73 esg_policy",
+      "entityUuid": "4186dc73-fcec-4932-8aea-d658d3a420fd",
+      "sourceUrls": ["https://sr.primark.com/sustainability-approach"],
+      "retrievedAt": "2026-09-06T10:02:00.000Z",
+      "creditsSpent": 1,
+      "confidence": "verified"
+    }
+  },
+  {
+    "id": "adi-2022-esg",
+    "title": "Analog Devices Inc 2022 Sustainability Report",
+    "url": "https://www.sustainabilityreports.com/analog-devices/2022/esg-report",
+    "publisher": "Analog Devices / sustainabilityreports.com",
+    "publishedDate": "2023-01-01",
+    "kind": "company-report",
+    "usedBy": ["partners"],
+    "provenance": {
+      "calaTool": "knowledge_search",
+      "input": "Analog Devices environmental sustainability commitments",
+      "sourceUrls": ["https://www.sustainabilityreports.com/analog-devices/2022/esg-report"],
+      "retrievedAt": "2026-09-06T10:06:00.000Z",
+      "creditsSpent": 1,
+      "confidence": "verified"
+    }
+  },
+  {
+    "id": "limerick-adi-award",
+    "title": "Analog Devices wins gold for exemplary sustainability practices",
+    "url": "https://www.limerick.ie/business/news-events/news/analog-devices-wins-gold-for-exemplary-sustainability-practices",
+    "publisher": "Limerick.ie",
+    "kind": "news",
+    "usedBy": ["partners"],
+    "provenance": {
+      "calaTool": "knowledge_search",
+      "input": "Analog Devices Ireland Limerick sustainability",
+      "sourceUrls": ["https://www.limerick.ie/business/news-events/news/analog-devices-wins-gold-for-exemplary-sustainability-practices"],
+      "retrievedAt": "2026-09-06T10:06:00.000Z",
+      "creditsSpent": 0,
+      "confidence": "verified"
+    }
+  },
+  {
+    "id": "refashion-epr-performance",
+    "title": "Environmental performance of the textiles and footwear EPR sector",
+    "url": "https://pro.refashion.fr/en/news/filiere/environmental-performance-epr-sector",
+    "publisher": "Refashion / Deloitte",
+    "kind": "research",
+    "usedBy": ["impact"],
+    "provenance": {
+      "calaTool": "knowledge_search",
+      "input": "Clothing reuse carbon savings per kg (LCA)",
+      "sourceUrls": ["https://pro.refashion.fr/en/news/filiere/environmental-performance-epr-sector"],
+      "retrievedAt": "2026-09-06T10:09:00.000Z",
+      "creditsSpent": 1,
+      "confidence": "single-source"
+    }
+  },
+  {
+    "id": "euric-lca-used-textiles",
+    "title": "LCA-based assessment of the management of European used textiles",
+    "url": "https://euric.org/resource-hub/reports-studies/study-lca-based-assessment-of-the-management-of-european-used-textiles",
+    "publisher": "EuRIC",
+    "kind": "research",
+    "usedBy": ["impact"],
+    "provenance": {
+      "calaTool": "knowledge_search",
+      "input": "Clothing reuse carbon savings per kg (LCA)",
+      "sourceUrls": ["https://euric.org/resource-hub/reports-studies/study-lca-based-assessment-of-the-management-of-european-used-textiles"],
+      "retrievedAt": "2026-09-06T10:09:00.000Z",
+      "creditsSpent": 0,
+      "confidence": "single-source"
+    }
+  }
+]

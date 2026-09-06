@@ -1,1 +1,244 @@
-[]
+[
+  {
+    "id": "ceigs",
+    "funderName": "Department of Climate, Energy and the Environment / Community Foundation Ireland",
+    "programme": "Circular Economy Innovation Grant Scheme (CEIGS)",
+    "geography": "ireland",
+    "amountRange": {
+      "value": { "min": 40000, "max": 50000, "currency": "EUR" },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What grants in Ireland fund community reuse or circular economy initiatives?",
+        "sourceUrls": ["https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/applications-now-open-for-2025-circular-economy-innovation-grant-scheme"],
+        "sourceTitles": ["Applications open, 2025 CEIGS (gov.ie)"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 1,
+        "confidence": "verified"
+      }
+    },
+    "deadline": {
+      "value": { "date": "2025-10-08", "rolling": false, "note": "Annual round. The 2025 round closed 8 October 2025; watch for the next round." },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "CEIGS 2025 application deadline",
+        "sourceUrls": ["https://gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/applications-now-open-for-2025-circular-economy-innovation-grant-scheme"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source",
+        "verifierNote": "Confirm the next round's opening and closing dates on Community Foundation Ireland's site before applying."
+      }
+    },
+    "eligibility": {
+      "value": {
+        "requiresLegalEntity": false,
+        "requiresCharityStatus": false,
+        "youthLed": false,
+        "raw": "Open to non-profit organisations, social enterprises, voluntary and community organisations, and small businesses with fewer than 50 employees. Textiles is a named priority theme."
+      },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "CEIGS eligibility criteria",
+        "sourceUrls": ["https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/applications-now-open-for-2025-circular-economy-innovation-grant-scheme"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified",
+        "verifierNote": "Voluntary and community organisations are eligible, but Community Foundation Ireland typically expects a constituted group with a bank account."
+      }
+    },
+    "fitScore": 85,
+    "blockers": ["Typically needs a constituted group with a bank account and a governing document"],
+    "status": "watching"
+  },
+  {
+    "id": "ccap-phase-2",
+    "funderName": "Department of Climate, Energy and the Environment (via local councils)",
+    "programme": "Community Climate Action Programme (CCAP) Phase II",
+    "geography": "ireland",
+    "amountRange": {
+      "value": { "min": 20000, "max": 100000, "currency": "EUR" },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What grants in Ireland fund community reuse or circular economy initiatives?",
+        "sourceUrls": ["https://circular.ie/articles/community-climate-fund-phase-ii"],
+        "sourceTitles": ["Community Climate Fund Phase II (circular.ie)"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified"
+      }
+    },
+    "deadline": {
+      "value": { "rolling": true, "note": "Administered by local councils. Apply through Limerick City and County Council when its round opens." },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "CCAP Phase II administration",
+        "sourceUrls": ["https://circular.ie/articles/community-climate-fund-phase-ii"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "eligibility": {
+      "value": {
+        "requiresLegalEntity": false,
+        "requiresCharityStatus": false,
+        "raw": "Community groups can apply for capital and equipment funding for circular-living themes including upcycling, library-of-things and fix-it initiatives."
+      },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "CCAP Phase II eligibility",
+        "sourceUrls": ["https://circular.ie/articles/community-climate-fund-phase-ii"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "fitScore": 78,
+    "blockers": ["Capital and equipment spend focus; less suited to running costs", "Council registration usually required"],
+    "status": "eligible"
+  },
+  {
+    "id": "european-solidarity-corps",
+    "funderName": "European Solidarity Corps (national agency: Léargas)",
+    "programme": "Solidarity Projects",
+    "geography": "eu",
+    "amountRange": {
+      "value": { "currency": "EUR" },
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "European Solidarity Corps Solidarity Projects, youth-led informal groups",
+        "sourceUrls": ["https://www.leargas.ie"],
+        "sourceTitles": ["Léargas, Irish national agency"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source",
+        "verifierNote": "Not verified in this Cala pass. Confirm current amounts and round deadlines on leargas.ie before applying."
+      }
+    },
+    "deadline": {
+      "value": { "rolling": true, "note": "Multiple annual rounds. Check the current Léargas call deadlines first." },
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "ESC Solidarity Projects deadlines",
+        "sourceUrls": ["https://www.leargas.ie"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "eligibility": {
+      "value": {
+        "requiresLegalEntity": false,
+        "requiresCharityStatus": false,
+        "youthLed": true,
+        "raw": "Funds youth-led local initiatives run by informal groups of young people. No requirement to be an established NGO. The single best structural fit for a youth-led, unincorporated initiative."
+      },
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "ESC Solidarity Projects eligibility",
+        "sourceUrls": ["https://www.leargas.ie"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "fitScore": 82,
+    "blockers": ["Group must meet the young-participant criteria; confirm current round is open"],
+    "status": "watching"
+  },
+  {
+    "id": "circular-communications-grants",
+    "funderName": "Government of Ireland (via Circular.ie)",
+    "programme": "Circular Communications Grants",
+    "geography": "ireland",
+    "amountRange": {
+      "value": { "min": 1000, "max": 5000, "currency": "EUR" },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What grants in Ireland fund community reuse or circular economy initiatives?",
+        "sourceUrls": ["https://www.circular.ie/articles/minister-alan-dillon-td-visits-mayo-recipients-of-circular-communications-grants"],
+        "sourceTitles": ["Circular Communications Grants (circular.ie)"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source",
+        "verifierNote": "A €100,000 scheme shared across 40 groups in December 2025; per-grant amounts inferred, not stated."
+      }
+    },
+    "deadline": {
+      "value": { "rolling": false, "note": "Annual scheme; last awarded December 2025." },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "Circular Communications Grants timing",
+        "sourceUrls": ["https://www.circular.ie/articles/minister-alan-dillon-td-visits-mayo-recipients-of-circular-communications-grants"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "eligibility": {
+      "value": {
+        "requiresLegalEntity": false,
+        "requiresCharityStatus": false,
+        "raw": "Helps community groups communicate their circular-economy work and reach wider audiences. Operates annually."
+      },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "Circular Communications Grants eligibility",
+        "sourceUrls": ["https://www.circular.ie/articles/minister-alan-dillon-td-visits-mayo-recipients-of-circular-communications-grants"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "fitScore": 68,
+    "blockers": ["Communications-focused, not core operating or capital funding"],
+    "status": "watching"
+  },
+  {
+    "id": "epa-green-enterprise",
+    "funderName": "Environmental Protection Agency (EPA)",
+    "programme": "Green Enterprise / Circular Economy Programme",
+    "geography": "ireland",
+    "amountRange": {
+      "value": { "currency": "EUR" },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What grants in Ireland fund community reuse or circular economy initiatives?",
+        "sourceUrls": ["https://www.epa.ie/environment-and-you/circular-economy"],
+        "sourceTitles": ["The Circular Economy (EPA)"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source",
+        "verifierNote": "EPA runs competitive innovation grants and has funded textile upcycling (for example the WECAN project). Amounts vary by call."
+      }
+    },
+    "deadline": {
+      "value": { "rolling": true, "note": "Competitive calls; check the EPA Circular Economy Programme for open rounds." },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "EPA Green Enterprise calls",
+        "sourceUrls": ["https://www.epa.ie/environment-and-you/circular-economy"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "eligibility": {
+      "value": {
+        "requiresLegalEntity": true,
+        "requiresCharityStatus": false,
+        "raw": "Competitive innovation and seed funding for circular-economy projects, including textile upcycling. Usually expects a constituted applicant."
+      },
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "EPA Green Enterprise eligibility",
+        "sourceUrls": ["https://www.epa.ie/environment-and-you/circular-economy"],
+        "retrievedAt": "2026-09-06T10:07:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "fitScore": 64,
+    "blockers": ["Usually requires a constituted legal entity", "Competitive and innovation-led"],
+    "status": "blocked"
+  }
+]

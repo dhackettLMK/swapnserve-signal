@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
-import { EmptyState } from "@/components/EmptyState";
+import { StatusLine } from "@/components/StatusLine";
+import { SpecList } from "@/components/SpecList";
 import { loadLatestBenchmark } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Benchmark" };
@@ -11,26 +12,32 @@ export default function BenchmarkPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Cala vs web search"
+        index="06"
+        eyebrow="Cala against web search"
         title="Benchmark"
-        intro={
-          <>
-            25 domain questions asked of both Cala and plain web search, measuring tokens, latency,
-            whether a citation was returned, and correctness against a manually established ground
-            truth. Published honestly — if Cala loses on a question class, the row says so.
-          </>
-        }
+        intro="Twenty-five domain questions put to both Cala and plain web search, measuring tokens, latency, whether a citation came back, and correctness against a manually established ground truth. Published honestly. If Cala loses on a class of question, the row says so."
       />
+
       {!run ? (
-        <EmptyState
-          phase="Phase 6"
-          building="Cala's public claim is ~8× fewer tokens than web search. This module tests it on this project's actual domain and publishes what it finds, including any result that does not replicate."
-        >
-          Acceptance bar: the run renders from committed JSON; methodology stated well enough to
-          reproduce.
-        </EmptyState>
+        <>
+          <div className="mt-8">
+            <StatusLine phase="PHASE 6" state="awaiting run" />
+          </div>
+          <SpecList
+            label="What this module delivers"
+            items={[
+              { k: "Fair comparison", v: "The same question to both systems, graded against a ground truth set by hand." },
+              { k: "Real measures", v: "Tokens consumed, latency, citation presence, and correctness recorded per question." },
+              { k: "Reproducible", v: "The run renders from committed data, with a method anyone can repeat." },
+              { k: "Honest", v: "Results unfavourable to Cala are published, not hidden." },
+              { k: "Acceptance", v: "A committed run and a method stated well enough to reproduce." },
+            ]}
+          />
+        </>
       ) : (
-        <p className="mt-8 text-muted">Run {run.runId} — {run.questions.length} questions.</p>
+        <p className="mt-8 text-dim">
+          Run {run.runId}, {run.questions.length} questions.
+        </p>
       )}
     </div>
   );

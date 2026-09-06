@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "id": "wfd-adopted",
+    "instrument": "Directive (EU) 2025/1892",
+    "jurisdiction": "eu",
+    "event": "European Parliament adopts the revised Waste Framework Directive, creating mandatory textile EPR",
+    "date": {
+      "value": "2025-09-10",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Directive (EU) 2025/1892 adoption date",
+        "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"],
+        "sourceTitles": ["Revised Waste Framework Directive enters into force (EU Commission)"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 1,
+        "confidence": "verified"
+      }
+    },
+    "status": "passed",
+    "implicationForSNS": "The legal basis for textile EPR now exists. From this point the direction of travel is fixed: producers will fund textile collection and reuse."
+  },
+  {
+    "id": "wfd-in-force",
+    "instrument": "Directive (EU) 2025/1892",
+    "jurisdiction": "eu",
+    "event": "Directive enters into force",
+    "date": {
+      "value": "2025-10-16",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Directive (EU) 2025/1892 entry into force",
+        "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"],
+        "sourceTitles": ["Revised Waste Framework Directive enters into force (EU Commission)"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified"
+      }
+    },
+    "status": "passed",
+    "implicationForSNS": "The clock starts. Social-economy enterprises in second-hand textile collection are exempt from EPR obligations and entitled to have their textile waste managed at no cost by producer responsibility organisations."
+  },
+  {
+    "id": "wfd-transpose",
+    "instrument": "Directive (EU) 2025/1892",
+    "jurisdiction": "ie",
+    "event": "Ireland must transpose the directive into national law",
+    "date": {
+      "value": "2027-06-17",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Waste Framework Directive transposition deadline; Ireland circular textiles roadmap",
+        "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en", "https://assets.gov.ie/static/documents/2c88b353/National_Policy_Statement_Roadmap_on_Circular_Textiles_FINAL_BRANDED.pdf"],
+        "sourceTitles": ["EU Commission news", "Ireland National Policy Statement and Roadmap on Circular Textiles (gov.ie)"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified"
+      }
+    },
+    "status": "upcoming",
+    "implicationForSNS": "This is the window to shape how Ireland defines a social economy enterprise. An unincorporated initiative may not qualify; a company limited by guarantee or registered charity almost certainly does. This is the strongest commercial argument for incorporating."
+  },
+  {
+    "id": "wfd-schemes-operational",
+    "instrument": "Directive (EU) 2025/1892",
+    "jurisdiction": "eu",
+    "event": "Textile EPR schemes must be operational across Member States",
+    "date": {
+      "value": "2028-04-17",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Textile EPR schemes operational deadline",
+        "sourceUrls": ["https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"],
+        "sourceTitles": ["Revised Waste Framework Directive enters into force (EU Commission)"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "verified"
+      }
+    },
+    "status": "upcoming",
+    "implicationForSNS": "Producers begin paying eco-modulated fees; the Irish producer responsibility organisation must fund collection, sorting and reuse. An operator already measuring and known to the scheme is in a far stronger position than one appearing in 2028."
+  },
+  {
+    "id": "wfd-micro-deferral",
+    "instrument": "Directive (EU) 2025/1892",
+    "jurisdiction": "eu",
+    "event": "Micro-enterprise deferral expires (under 10 staff, up to EUR 2M turnover)",
+    "date": {
+      "value": "2029-04-17",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Micro-enterprise deferral date",
+        "sourceUrls": ["https://www.digiproductpass.com/waste-framework-directive"],
+        "sourceTitles": ["Waste Framework Directive (EU) 2025/1892 textile EPR dates"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "status": "upcoming",
+    "implicationForSNS": "Small producers come fully into scope, widening the base of companies obliged to fund reuse."
+  },
+  {
+    "id": "wfd-commission-review",
+    "instrument": "Directive (EU) 2025/1892",
+    "jurisdiction": "eu",
+    "event": "European Commission review on textile waste prevention, reuse and recycling targets",
+    "date": {
+      "value": "2029-12-31",
+      "provenance": {
+        "calaTool": "primary-source",
+        "input": "Directive review clause on textile targets",
+        "sourceUrls": ["https://assets.gov.ie/static/documents/2c88b353/National_Policy_Statement_Roadmap_on_Circular_Textiles_FINAL_BRANDED.pdf"],
+        "sourceTitles": ["Ireland National Policy Statement and Roadmap on Circular Textiles (gov.ie)"],
+        "retrievedAt": "2026-09-06T10:08:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "status": "upcoming",
+    "implicationForSNS": "EU-wide reuse and recycling targets are likely to follow, further raising the value of measured, proven reuse capacity."
+  }
+]

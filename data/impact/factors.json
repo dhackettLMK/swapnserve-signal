@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "id": "co2e-per-kg-reuse-refashion",
+    "label": "Carbon avoided per kg of clothing collected (system-level, lower bound)",
+    "value": {
+      "value": 2.4,
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What carbon savings per kilogram result from clothing reuse in life cycle assessments?",
+        "sourceUrls": ["https://pro.refashion.fr/en/news/filiere/environmental-performance-epr-sector"],
+        "sourceTitles": ["Environmental performance of the EPR textile sector (Refashion/Deloitte)"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 1,
+        "confidence": "single-source"
+      }
+    },
+    "unit": "kg CO2e avoided / kg collected",
+    "geography": "France (EPR sector, 2023 data)",
+    "year": 2023,
+    "systemBoundary": "Full chain: collection, sorting, second-hand reuse and recovery, for clothing and household linen. Second-hand reuse is the main driver.",
+    "uncertainty": "Lower-bound, system-level average across mixed-quality streams. All textiles including footwear average 2.1; footwear alone only 0.50.",
+    "methodologyUrl": "https://pro.refashion.fr/en/news/filiere/environmental-performance-epr-sector"
+  },
+  {
+    "id": "co2e-per-garment-euric",
+    "label": "Carbon avoided per high or medium-quality garment reused",
+    "value": {
+      "value": 3,
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What carbon savings per kilogram result from clothing reuse in life cycle assessments?",
+        "sourceUrls": ["https://euric.org/resource-hub/reports-studies/study-lca-based-assessment-of-the-management-of-european-used-textiles"],
+        "sourceTitles": ["LCA-based assessment of European used textiles (EuRIC)"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "unit": "kg CO2e avoided / garment",
+    "geography": "EU",
+    "year": 2023,
+    "systemBoundary": "Reuse of a high or medium-quality garment versus new production, including global transport emissions for exported reuse.",
+    "uncertainty": "Per-garment, not per-kg. Reuse found to be roughly 70 times lower impact than new production for reusable qualities.",
+    "methodologyUrl": "https://euric.org/resource-hub/reports-studies/study-lca-based-assessment-of-the-management-of-european-used-textiles"
+  },
+  {
+    "id": "co2e-per-kg-reuse-upc",
+    "label": "Carbon avoided per kg of clothing reused (upper bound)",
+    "value": {
+      "value": 25,
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What carbon savings per kilogram result from clothing reuse in life cycle assessments?",
+        "sourceUrls": ["https://phys.org/news/2022-09-reusing-kg-co2.html"],
+        "sourceTitles": ["Reusing 1 kg of clothing saves 25 kg of CO2 (UPC INTEXTER)"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "unit": "kg CO2e avoided / kg reused",
+    "geography": "Spain / EU study",
+    "year": 2022,
+    "systemBoundary": "Avoided virgin fibre production and manufacturing for the fibres reused.",
+    "substitutionRate": 1,
+    "uncertainty": "Upper-bound. Assumes a reused garment fully displaces new production (substitution rate 1), which overstates real-world displacement.",
+    "methodologyUrl": "https://phys.org/news/2022-09-reusing-kg-co2.html"
+  },
+  {
+    "id": "energy-per-kg-cotton-reuse",
+    "label": "Energy avoided per kg of virgin cotton displaced by reuse",
+    "value": {
+      "value": 65,
+      "provenance": {
+        "calaTool": "knowledge_search",
+        "input": "What carbon savings per kilogram result from clothing reuse in life cycle assessments?",
+        "sourceUrls": ["http://nectar.northampton.ac.uk/6227"],
+        "sourceTitles": ["LCA of donated textile reuse/recycling, UK energy perspective"],
+        "retrievedAt": "2026-09-06T10:09:00.000Z",
+        "creditsSpent": 0,
+        "confidence": "single-source"
+      }
+    },
+    "unit": "kWh saved / kg virgin cotton displaced",
+    "geography": "United Kingdom",
+    "year": 2011,
+    "systemBoundary": "Streamlined energy LCA: extraction, materials, electricity, collection, processing, distribution and disposal, for donated textiles versus virgin material.",
+    "uncertainty": "Expressed as energy, not CO2e. Converts to carbon by the local grid intensity. Polyester displacement saves roughly 90 kWh per kg.",
+    "methodologyUrl": "http://nectar.northampton.ac.uk/6227"
+  }
+]
