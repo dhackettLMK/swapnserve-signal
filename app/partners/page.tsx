@@ -65,29 +65,19 @@ function PartnerCard({ partner: p }: { partner: PartnerTarget }) {
           <p className="mt-1 text-sm text-dim">{p.midWestPresence.value.sites.join(" · ")}</p>
         </div>
         <div className="flex items-center gap-2">
-          <span className="rounded-[4px] border border-line-2 px-2 py-0.5 font-mono text-[11px] text-dim">
-            {TIER_LABEL[p.tier]}
+          <span className="keycap px-2 py-0.5 mono text-[11px] text-dim">{TIER_LABEL[p.tier]}</span>
+          <span className="keycap px-2 py-0.5 mono text-[11px] text-ink">
+            {EPR_LABEL[p.eprExposure.value]}
           </span>
-          {p.eprExposure.value === "textile-producer" ? (
-            <span className="rounded-[4px] bg-signal-deep px-2 py-0.5 font-mono text-[11px] text-signal">
-              {EPR_LABEL[p.eprExposure.value]}
-            </span>
-          ) : (
-            <span className="rounded-[4px] border border-line-2 px-2 py-0.5 font-mono text-[11px] text-dim">
-              {EPR_LABEL[p.eprExposure.value]}
-            </span>
-          )}
         </div>
       </div>
 
       <div className="mt-5 space-y-3">
         <p className="tag">Published commitments</p>
         {p.commitments.map((c, i) => (
-          <div key={i} className="rounded-[5px] border border-line bg-raised p-4">
-            <p className="text-[15px] leading-relaxed">
-              <span className="text-signal">&ldquo;</span>
-              {c.value.quote}
-              <span className="text-signal">&rdquo;</span>
+          <div key={i} className="well p-4">
+            <p className="editorial text-[17px] leading-relaxed">
+              &ldquo;{c.value.quote}&rdquo;
             </p>
             <div className="mt-2 flex flex-wrap items-center gap-3">
               <span className="font-mono text-[11px] text-faint">

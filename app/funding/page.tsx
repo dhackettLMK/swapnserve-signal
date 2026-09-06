@@ -50,13 +50,13 @@ export default function FundingPage() {
 }
 
 const STATUS_STYLE: Record<string, string> = {
-  eligible: "bg-signal-deep text-signal",
-  watching: "border border-line-2 text-dim",
-  applying: "bg-signal-deep text-signal",
-  submitted: "bg-signal-deep text-signal",
-  won: "bg-signal text-bg",
-  lost: "border border-line-2 text-faint",
-  blocked: "bg-warn-soft text-warn",
+  eligible: "text-ink",
+  watching: "text-dim",
+  applying: "text-ink",
+  submitted: "text-ink",
+  won: "text-signal",
+  lost: "text-faint",
+  blocked: "text-warn",
 };
 
 function fmtAmount(a: FundingOpportunity["amountRange"]["value"]): string {
@@ -84,7 +84,7 @@ function FundingCard({ opp: f }: { opp: FundingOpportunity }) {
           <h2 className="text-lg font-semibold tracking-tight">{f.programme}</h2>
           <p className="mt-0.5 text-sm text-dim">{f.funderName}</p>
         </div>
-        <span className={`rounded-[4px] px-2 py-0.5 font-mono text-[11px] ${STATUS_STYLE[f.status] ?? "text-dim"}`}>
+        <span className={`keycap px-2 py-0.5 mono text-[11px] ${STATUS_STYLE[f.status] ?? "text-dim"}`}>
           {f.status}
         </span>
       </div>
@@ -96,13 +96,12 @@ function FundingCard({ opp: f }: { opp: FundingOpportunity }) {
         <Cell
           k="Unincorporated"
           v={unincorporatedOk ? "eligible" : "needs a legal entity"}
-          accent={unincorporatedOk}
           warn={!unincorporatedOk}
         />
       </dl>
 
-      <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-line">
-        <div className="h-full rounded-full bg-signal" style={{ width: `${f.fitScore}%` }} />
+      <div className="groove mt-3 h-1.5 w-full overflow-hidden">
+        <div className="h-full rounded-[2px] bg-ink" style={{ width: `${f.fitScore}%` }} />
       </div>
 
       <p className="mt-4 text-sm leading-relaxed text-dim">{elig.raw}</p>
@@ -128,11 +127,11 @@ function FundingCard({ opp: f }: { opp: FundingOpportunity }) {
   );
 }
 
-function Cell({ k, v, accent, warn }: { k: string; v: string; accent?: boolean; warn?: boolean }) {
+function Cell({ k, v, warn }: { k: string; v: string; warn?: boolean }) {
   return (
     <div>
       <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">{k}</dt>
-      <dd className={`mt-0.5 text-sm ${accent ? "text-signal" : warn ? "text-warn" : "text-ink"}`}>{v}</dd>
+      <dd className={`mt-0.5 text-sm ${warn ? "text-warn" : "text-ink"}`}>{v}</dd>
     </div>
   );
 }

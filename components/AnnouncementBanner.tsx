@@ -1,17 +1,14 @@
 import Link from "next/link";
 
-/**
- * Dot-textured accent strip, in the spirit of a high-tech announcement bar.
- * Original copy, tied to Swap'n'Serve's actual thesis.
- */
+/** Ink keycap link, no green fill. Green is for the primary action only. */
 export function AnnouncementBanner() {
   return (
     <Link
-      href="/policy"
-      className="banner-dots group flex items-center justify-center gap-2 rounded-[8px] border border-line px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-signal-2"
+      href="/#console"
+      className="keycap group inline-flex items-center gap-2 px-3 py-1.5 mono text-[11px] uppercase tracking-[0.14em] text-dim"
     >
-      Ireland&rsquo;s textile EPR scheme is expected around 2028
-      <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+      Worked example: Swap&rsquo;n&rsquo;Serve, Limerick
+      <span className="transition-transform duration-150 group-hover:translate-x-0.5">&rarr;</span>
     </Link>
   );
 }

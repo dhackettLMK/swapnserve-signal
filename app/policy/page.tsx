@@ -43,10 +43,10 @@ export default function PolicyPage() {
               <Reveal key={m.id} as="li" delay={i * 50}>
                 <div className="relative pb-9 pl-7">
                   <span
-                    className={`absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full ${passed ? "bg-faint" : "bg-signal"}`}
+                    className={`absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full ${passed ? "bg-faint" : "bg-ink"}`}
                   />
                   <div className="flex flex-wrap items-baseline gap-3">
-                    <time className="font-mono text-sm text-signal">
+                    <time className="mono text-sm text-ink">
                       {d.toLocaleDateString("en-IE", { day: "numeric", month: "short", year: "numeric" })}
                     </time>
                     <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">

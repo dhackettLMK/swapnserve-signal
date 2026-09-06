@@ -5,12 +5,13 @@ import { SpecList } from "@/components/SpecList";
 import { Reveal } from "@/components/Reveal";
 import { ProvenanceChip } from "@/components/ProvenanceChip";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
-import { loadImpactFactors } from "@/lib/data";
+import { loadImpactFactors, loadSelfReported } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Impact" };
 
 export default function ImpactPage() {
   const factors = loadImpactFactors();
+  const selfReported = loadSelfReported();
 
   return (
     <div>
@@ -37,6 +38,31 @@ export default function ImpactPage() {
         </>
       ) : (
         <div className="mt-10 space-y-10">
+          {selfReported ? (
+            <Reveal>
+              <section className="panel p-6">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <p className="tag">Swap&rsquo;n&rsquo;Serve so far</p>
+                  <span className="mono text-[10px] uppercase tracking-[0.14em] text-faint">self-reported</span>
+                </div>
+                <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-5">
+                  {selfReported.metrics.map((m) => (
+                    <div key={m.id}>
+                      <dd className="mono text-2xl text-ink tabular-nums">
+                        {m.unit === "EUR" ? "€" : ""}
+                        {m.value.toLocaleString()}
+                        {m.unit !== "EUR" ? "+" : "+"}
+                      </dd>
+                      <dt className="mt-1 text-[13px] text-dim">{m.label}</dt>
+                      {m.note ? <p className="mt-0.5 text-[11px] text-faint">{m.note}</p> : null}
+                    </div>
+                  ))}
+                </dl>
+                <p className="mt-5 border-t border-line pt-4 text-xs text-faint">{selfReported.disclaimer}</p>
+              </section>
+            </Reveal>
+          ) : null}
+
           <Reveal>
             <ImpactCalculator />
           </Reveal>
@@ -51,7 +77,7 @@ export default function ImpactPage() {
                   <article className="panel p-5">
                     <div className="flex flex-wrap items-baseline justify-between gap-3">
                       <h2 className="max-w-xl text-base font-medium">{f.label}</h2>
-                      <span className="font-mono text-lg text-signal tabular-nums">
+                      <span className="mono text-lg text-ink tabular-nums">
                         {f.value.value} <span className="text-xs text-dim">{f.unit}</span>
                       </span>
                     </div>
@@ -65,7 +91,7 @@ export default function ImpactPage() {
                       <Row k="Uncertainty" v={f.uncertainty} />
                     </dl>
                     <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-line pt-3">
-                      <a href={f.methodologyUrl} target="_blank" rel="noreferrer" className="font-mono text-[11px] text-signal">
+                      <a href={f.methodologyUrl} target="_blank" rel="noreferrer" className="mono text-[11px] text-ink underline underline-offset-2">
                         methodology
                       </a>
                       <ProvenanceChip provenance={f.value.provenance} />

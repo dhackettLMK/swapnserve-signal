@@ -3,6 +3,7 @@ import { NAV } from "@/lib/nav";
 import { Reveal } from "@/components/Reveal";
 import { CreditMeter } from "@/components/CreditMeter";
 import { AnalysisConsole } from "@/components/AnalysisConsole";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { loadCreditLedger, loadEvidence } from "@/lib/data";
 
 const PRINCIPLES = [
@@ -25,60 +26,56 @@ export default function Home() {
   const sources = loadEvidence().length;
 
   return (
-    <div className="space-y-24">
-      {/* Hero */}
+    <div className="space-y-20">
       <section className="pt-2">
-        <Link
-          href="#console"
-          className="banner-dots group inline-flex items-center gap-2 rounded-[8px] border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-signal-2"
-        >
-          Worked example: Swap&rsquo;n&rsquo;Serve, Limerick
-          <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
-        </Link>
-
-        <h1 className="display mt-7 max-w-4xl text-[2.6rem] leading-[1.04] sm:text-[4rem]">
-          The opportunities your nonprofit is missing, found and{" "}
-          <span className="accent-word">sourced</span>.
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-dim sm:text-lg">
-          Enter a country, a cause, and a legal status. Signal uses Cala to read back the funding an
-          organisation can actually apply for, the regulation heading its way, the partners worth
-          approaching, and how to frame its impact. Every item carries its source. Shown here on
-          Swap&rsquo;n&rsquo;Serve, a Limerick clothing-reuse initiative.
-        </p>
-
-        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
-          <span>Built on Cala</span>
-          <span className="text-line-2">|</span>
-          <span>{ledger.totalCredits}/{ledger.budgetPerMonth} credits used</span>
-          <span className="text-line-2">|</span>
-          <span>{sources} sources catalogued</span>
-        </div>
+        <Reveal>
+          <AnnouncementBanner />
+        </Reveal>
+        <Reveal delay={60}>
+          <h1 className="display mt-7 max-w-4xl text-[2.4rem] leading-[1.04] sm:text-[3.6rem]">
+            The opportunities your nonprofit is missing, found and{" "}
+            <span className="editorial">sourced</span>.
+          </h1>
+        </Reveal>
+        <Reveal delay={110}>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-dim">
+            Enter a country, a cause and a legal status. Signal uses Cala to read back the funding an
+            organisation can actually apply for, the regulation heading its way, the partners worth
+            approaching, and how to frame its impact. Every item carries its source. Shown here on
+            Swap&rsquo;n&rsquo;Serve, a Limerick community initiative.
+          </p>
+        </Reveal>
+        <Reveal delay={160}>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link href="/#console" className="btn-action px-5 py-2.5 text-sm font-medium">
+              Run analysis
+            </Link>
+            <Link href="/how-it-works" className="keycap px-5 py-2.5 text-sm font-medium text-ink">
+              How it works
+            </Link>
+          </div>
+          <p className="mt-6 mono text-[11px] uppercase tracking-[0.14em] text-faint">
+            Built on Cala · {ledger.totalCredits}/{ledger.budgetPerMonth} credits used · {sources} sources catalogued
+          </p>
+        </Reveal>
       </section>
 
-      {/* The tool */}
-      <section id="console" className="scroll-mt-28">
+      <section id="console" className="scroll-mt-24">
         <Reveal>
           <AnalysisConsole />
         </Reveal>
       </section>
 
-      {/* How a reading is built */}
       <section>
-        <Reveal>
-          <p className="tag">How every reading is built</p>
-        </Reveal>
-        <div className="mt-6 border-t border-line">
+        <Reveal><p className="tag">How every reading is built</p></Reveal>
+        <div className="mt-5 border-t border-line">
           {PRINCIPLES.map((p, i) => (
-            <Reveal key={p.t} delay={i * 80}>
-              <div className="group grid gap-2 border-b border-line py-7 sm:grid-cols-[3rem_1fr] sm:gap-8">
-                <span className="font-mono text-sm text-faint">{String(i + 1).padStart(2, "0")}</span>
+            <Reveal key={p.t} delay={i * 70}>
+              <div className="grid gap-2 border-b border-line py-6 sm:grid-cols-[3rem_1fr] sm:gap-8">
+                <span className="mono text-sm text-faint">{String(i + 1).padStart(2, "0")}</span>
                 <div className="max-w-3xl">
-                  <h3 className="text-lg font-medium transition-colors group-hover:text-signal">
-                    {p.t}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-dim">{p.d}</p>
+                  <h3 className="text-lg font-medium">{p.t}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-dim">{p.d}</p>
                 </div>
               </div>
             </Reveal>
@@ -86,41 +83,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Modules */}
       <section>
-        <Reveal>
-          <p className="tag">The four readings, and the workings behind them</p>
-        </Reveal>
-        <div className="mt-6 border-t border-line">
+        <Reveal><p className="tag">The four readings, and the workings behind them</p></Reveal>
+        <div className="mt-5 border-t border-line">
           {NAV.map((item, i) => (
-            <Reveal key={item.href} delay={i * 40}>
+            <Reveal key={item.href} delay={i * 35}>
               <Link
                 href={item.href}
-                className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-b border-line py-5 transition-colors hover:bg-raised"
+                className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-b border-line py-4 transition-colors hover:bg-panel"
               >
-                <span className="font-mono text-sm text-faint">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <span className="mono text-sm text-faint">{String(i + 1).padStart(2, "0")}</span>
                 <span className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-4">
-                  <span className="text-base font-medium transition-colors group-hover:text-signal">
-                    {item.label}
-                  </span>
+                  <span className="text-base font-medium">{item.label}</span>
                   <span className="text-sm text-dim">{item.short}</span>
                 </span>
-                <span className="pr-2 text-dim transition-transform duration-300 group-hover:translate-x-1 group-hover:text-signal">
-                  &rarr;
-                </span>
+                <span className="pr-2 text-dim transition-transform duration-150 group-hover:translate-x-0.5">&rarr;</span>
               </Link>
             </Reveal>
           ))}
         </div>
       </section>
 
-      {/* Credits */}
       <section className="max-w-md">
-        <Reveal>
-          <CreditMeter />
-        </Reveal>
+        <Reveal><CreditMeter /></Reveal>
       </section>
     </div>
   );

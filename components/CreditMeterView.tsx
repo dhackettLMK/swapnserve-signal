@@ -25,18 +25,13 @@ export function CreditMeterView({
         for (const e of entries) {
           if (!e.isIntersecting) continue;
           io.unobserve(e.target);
-          if (reduced) {
-            setShown(used);
-            setFill(pct);
-            return;
-          }
+          if (reduced) { setShown(used); setFill(pct); return; }
           setFill(pct);
-          const dur = 900;
+          const dur = 800;
           const t0 = performance.now();
           const step = (now: number) => {
             const k = Math.min(1, (now - t0) / dur);
-            const eased = 1 - Math.pow(1 - k, 3);
-            setShown(Math.round(used * eased));
+            setShown(Math.round(used * (1 - Math.pow(1 - k, 3))));
             if (k < 1) requestAnimationFrame(step);
           };
           requestAnimationFrame(step);
@@ -52,14 +47,14 @@ export function CreditMeterView({
     <div ref={ref} className={compact ? "" : "panel p-5"}>
       <div className="flex items-baseline justify-between">
         <span className="tag">Cala credits</span>
-        <span className="font-mono text-sm tabular-nums">
+        <span className="mono text-sm tabular-nums">
           <span className="text-signal">{shown}</span>
           <span className="text-faint"> / {budget}</span>
         </span>
       </div>
-      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-line">
+      <div className="groove mt-3 h-2 w-full overflow-hidden">
         <div
-          className="h-full rounded-full bg-signal transition-[width] duration-[900ms] ease-out"
+          className="h-full rounded-[3px] bg-signal transition-[width] duration-700 ease-out"
           style={{ width: `${fill}%` }}
         />
       </div>
