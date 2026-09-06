@@ -72,6 +72,30 @@ function flagBody(country: string) {
           <rect y="5.75" width={W} height="2.5" fill="#FECC00" />
         </>
       );
+    case "Italy":
+      return (
+        <>
+          <rect width="6.67" height={H} fill="#009246" />
+          <rect x="6.67" width="6.67" height={H} fill="#fff" />
+          <rect x="13.33" width="6.67" height={H} fill="#CE2B37" />
+        </>
+      );
+    case "Belgium":
+      return (
+        <>
+          <rect width="6.67" height={H} fill="#1a1a1a" />
+          <rect x="6.67" width="6.67" height={H} fill="#FDDA24" />
+          <rect x="13.33" width="6.67" height={H} fill="#EF3340" />
+        </>
+      );
+    case "Denmark":
+      return (
+        <>
+          <rect width={W} height={H} fill="#C8102E" />
+          <rect x="6" width="2.5" height={H} fill="#fff" />
+          <rect y="5.75" width={W} height="2.5" fill="#fff" />
+        </>
+      );
     case "United Kingdom":
       return (
         <>

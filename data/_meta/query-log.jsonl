@@ -57,3 +57,9 @@
 {"at":"2026-09-06T13:22:00.000Z","tool":"knowledge_search","input":"What is the median return on investment of public health prevention interventions?","credits":1,"responseHash":"bench_i23"}
 {"at":"2026-09-06T13:23:00.000Z","tool":"knowledge_search","input":"Why should clothing reuse life cycle assessments not assume one-for-one substitution?","credits":1,"responseHash":"bench_i24"}
 {"at":"2026-09-06T13:24:00.000Z","tool":"knowledge_search","input":"How does arts participation affect wellbeing and self-reported health?","credits":1,"responseHash":"bench_i25"}
+{"at":"2026-09-06T14:00:00.000Z","tool":"knowledge_search","input":"What national grants fund community and voluntary organisations in Portugal?","credits":1,"responseHash":"country_pt"}
+{"at":"2026-09-06T14:01:00.000Z","tool":"knowledge_search","input":"What national grants fund community and nonprofit organisations in Poland?","credits":1,"responseHash":"country_pl"}
+{"at":"2026-09-06T14:02:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and civil society organisations in Sweden?","credits":1,"responseHash":"country_se"}
+{"at":"2026-09-06T14:03:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and voluntary organisations in Italy?","credits":1,"responseHash":"country_it"}
+{"at":"2026-09-06T14:04:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and community organisations in Belgium?","credits":1,"responseHash":"country_be"}
+{"at":"2026-09-06T14:05:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and community organisations in Denmark?","credits":1,"responseHash":"country_dk"}

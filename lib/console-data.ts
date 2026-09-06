@@ -48,6 +48,9 @@ export const COUNTRIES = [
   "Portugal",
   "Poland",
   "Sweden",
+  "Italy",
+  "Belgium",
+  "Denmark",
   "Other EU / EEA",
 ];
 
@@ -382,6 +385,216 @@ export const SIGNALS: Signal[] = [
     sourceUrl: "https://www.rvo.nl/subsidies-financiering",
     actionLabel: "Apply / info",
     actionUrl: "https://www.rvo.nl/subsidies-financiering",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Portugal funding ----------------
+  {
+    lens: "funding",
+    title: "EEA Grants Portugal, Civil Society Fund",
+    detail:
+      "The EEA Grants 2021–2028 cycle allocates €126.3m to Portugal across five programmes, with a Civil Society Fund operated by the Calouste Gulbenkian Foundation supporting NGOs and community groups directly.",
+    causes: ["Social inclusion", "Environment & climate", "Arts & culture"],
+    geographies: ["Portugal"],
+    confidence: "verified",
+    sourceLabel: "eeagrants.org",
+    sourceUrl: "https://eeagrants.org/en/portugal",
+    actionLabel: "Apply / info",
+    actionUrl: "https://eeagrants.org/en/portugal",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "Social Security cooperation agreements (IPSS)",
+    detail:
+      "The main ongoing state funding for Portuguese social-sector bodies: cooperation agreements between the Instituto da Segurança Social and Private Institutions of Social Solidarity (IPSS) for childcare, eldercare and social services. Requires IPSS status, so a constituted body, not an informal group.",
+    causes: ["Social inclusion", "Health & wellbeing"],
+    geographies: ["Portugal"],
+    confidence: "single-source",
+    sourceLabel: "seg-social.pt",
+    sourceUrl: "https://www.seg-social.pt",
+    actionLabel: "Info",
+    actionUrl: "https://www.seg-social.pt",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Poland funding ----------------
+  {
+    lens: "funding",
+    title: "NOWEFIO, Fundusz Inicjatyw Obywatelskich",
+    detail:
+      "The government Civic Initiatives Fund (2021–2030), managed by NIW-CRSO. Priority 1 backs small, local and young organisations and informal groups (through a patron operator). About 73m PLN awarded in the 2026 edition.",
+    causes: ["Social inclusion", "Youth & education", "Environment & climate"],
+    geographies: ["Poland"],
+    confidence: "verified",
+    sourceLabel: "niw.gov.pl",
+    sourceUrl: "https://niw.gov.pl/en/",
+    actionLabel: "Apply / info",
+    actionUrl: "https://niw.gov.pl/en/",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "PROO, Civil Society Organisations Development Programme",
+    detail:
+      "The first direct institutional-development grant for Polish civil-society organisations (2018–2030), managed by NIW-CRSO. Funds long-term strategy, reserves and emergency support, with no own contribution required. 585m PLN across the programme.",
+    causes: ["Social inclusion"],
+    geographies: ["Poland"],
+    confidence: "verified",
+    sourceLabel: "niw.gov.pl",
+    sourceUrl: "https://niw.gov.pl/en/our-programmes/csodp",
+    actionLabel: "Apply / info",
+    actionUrl: "https://niw.gov.pl/en/our-programmes/csodp",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "Fundusz Młodzieżowy (Youth Fund)",
+    detail:
+      "A government programme (2022–2033) for youth civic engagement and youth-led organisations, managed by NIW-CRSO and distributed both centrally and through regional operators in each voivodeship.",
+    causes: ["Youth & education", "Social inclusion"],
+    geographies: ["Poland"],
+    confidence: "verified",
+    sourceLabel: "niw.gov.pl",
+    sourceUrl: "https://niw.gov.pl/nasze-programy/fundusz-mlodziezowy",
+    actionLabel: "Apply / info",
+    actionUrl: "https://niw.gov.pl/nasze-programy/fundusz-mlodziezowy",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Sweden funding ----------------
+  {
+    lens: "funding",
+    title: "MUCF, state grants to youth and civil society",
+    detail:
+      "The Swedish Agency for Youth and Civil Society distributes state grants to nonprofit and youth organisations. Organisational grants for child and youth bodies ran to about SEK 262m for 110 organisations in 2024; only Swedish organisations qualify.",
+    causes: ["Youth & education", "Social inclusion"],
+    geographies: ["Sweden"],
+    confidence: "verified",
+    sourceLabel: "mucf.se",
+    sourceUrl: "https://www.mucf.se/en/grants",
+    actionLabel: "Apply / info",
+    actionUrl: "https://www.mucf.se/en/grants",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "Allmänna arvsfonden (Swedish Inheritance Fund)",
+    detail:
+      "A state fund financing innovative nonprofit projects for children, young people, older people and people with disabilities. About 500 projects funded each year; a well-known launchpad for new Swedish social initiatives.",
+    causes: ["Social inclusion", "Youth & education", "Health & wellbeing"],
+    geographies: ["Sweden"],
+    confidence: "verified",
+    sourceLabel: "arvsfonden.se",
+    sourceUrl: "https://www.arvsfonden.se",
+    actionLabel: "Apply / info",
+    actionUrl: "https://www.arvsfonden.se",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Italy funding ----------------
+  {
+    lens: "funding",
+    title: "Fondo per il Terzo Settore (Art. 72)",
+    detail:
+      "The main national project fund for Italy's Third Sector, run by the Ministry of Labour and Social Policies: €141m for 2025–2027, awarded through periodic calls (for example Avviso 2/2025). Requires registration in the RUNTS (Third Sector register).",
+    causes: ["Social inclusion", "Environment & climate", "Youth & education"],
+    geographies: ["Italy"],
+    confidence: "verified",
+    sourceLabel: "lavoro.gov.it",
+    sourceUrl: "https://www.lavoro.gov.it",
+    actionLabel: "Apply / info",
+    actionUrl: "https://www.lavoro.gov.it",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "5 per mille (Cinque per Mille)",
+    detail:
+      "Italian taxpayers can direct 0.5% of their income tax to a Third Sector entity, worth about €500m a year across 40,000+ organisations. Register in the RUNTS and enrol with the Ministry of Labour by 10 April to take part.",
+    causes: ["Social inclusion", "Health & wellbeing", "Arts & culture", "Environment & climate"],
+    geographies: ["Italy"],
+    confidence: "verified",
+    sourceLabel: "lavoro.gov.it",
+    sourceUrl: "https://www.lavoro.gov.it/temi-e-priorita/terzo-settore-e-responsabilita-sociale-imprese/focus-on/cinque-per-mille",
+    actionLabel: "Info",
+    actionUrl: "https://www.lavoro.gov.it/temi-e-priorita/terzo-settore-e-responsabilita-sociale-imprese/focus-on/cinque-per-mille",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Belgium funding ----------------
+  {
+    lens: "funding",
+    title: "Loterie Nationale / Nationale Loterij",
+    detail:
+      "The Belgian National Lottery directs about €185m a year to good causes, most of it to humanitarian and social projects, through regular open calls (recent rounds on child poverty and sustainable development).",
+    causes: ["Social inclusion", "Arts & culture", "Health & wellbeing", "Environment & climate"],
+    geographies: ["Belgium"],
+    confidence: "verified",
+    sourceLabel: "loterie-nationale.be",
+    sourceUrl: "https://www.loterie-nationale.be",
+    actionLabel: "Calls / info",
+    actionUrl: "https://www.loterie-nationale.be",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "King Baudouin Foundation",
+    detail:
+      "Belgium's largest independent foundation and a major grant-maker across social justice and poverty, civil-society strengthening, mental health and community development, through regular calls for proposals and hundreds of named funds.",
+    causes: ["Social inclusion", "Health & wellbeing", "Arts & culture", "Youth & education"],
+    geographies: ["Belgium"],
+    confidence: "verified",
+    sourceLabel: "kbs-frb.be",
+    sourceUrl: "https://kbs-frb.be/en",
+    actionLabel: "Calls / info",
+    actionUrl: "https://kbs-frb.be/en",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Denmark funding ----------------
+  {
+    lens: "funding",
+    title: "Nordea-fonden",
+    detail:
+      "A large Danish foundation funding projects that promote a good life and wellbeing in Denmark, spanning community, culture, sport and nature. Open to Danish associations and community groups.",
+    causes: ["Arts & culture", "Social inclusion", "Health & wellbeing", "Environment & climate"],
+    geographies: ["Denmark"],
+    confidence: "single-source",
+    sourceLabel: "nordeafonden.dk",
+    sourceUrl: "https://nordeafonden.dk",
+    actionLabel: "Apply / info",
+    actionUrl: "https://nordeafonden.dk",
+    via: "knowledge_search",
+  },
+  {
+    lens: "funding",
+    title: "Civilsamfundspuljen (Civil Society Fund)",
+    detail:
+      "Denmark's main civil-society grant pool, funded by the Ministry of Foreign Affairs and managed by CISU. Small projects up to DKK 150k, large up to DKK 700k. Note: it funds rights-based development work by Danish organisations with partners in developing countries, not purely domestic activity.",
+    causes: ["Social inclusion"],
+    geographies: ["Denmark"],
+    confidence: "verified",
+    sourceLabel: "cisu.dk",
+    sourceUrl: "https://www.cisu.dk/en/funding",
+    actionLabel: "Apply / info",
+    actionUrl: "https://www.cisu.dk/en/funding",
+    via: "knowledge_search",
+  },
+
+  // ---------------- Nordic (cross-border) ----------------
+  {
+    lens: "funding",
+    title: "Demos, Nordic Civil Society Collaboration",
+    detail:
+      "A Nordic programme giving up to €50,000 to nonprofits for cross-border projects involving at least three Nordic countries, for democratic engagement, exchange and joint cultural work. At least 15% co-funding required.",
+    causes: ["Social inclusion", "Arts & culture", "Youth & education"],
+    geographies: ["Sweden", "Denmark"],
+    confidence: "single-source",
+    sourceLabel: "fundsforngos.org",
+    sourceUrl: "https://www2.fundsforngos.org/democracy-good-governance/demos-funding-programme-for-nordic-civil-society-collaboration",
+    actionLabel: "Info",
+    actionUrl: "https://www2.fundsforngos.org/democracy-good-governance/demos-funding-programme-for-nordic-civil-society-collaboration",
     via: "knowledge_search",
   },
 

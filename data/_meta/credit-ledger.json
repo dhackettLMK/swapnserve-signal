@@ -1,6 +1,6 @@
 {
   "budgetPerMonth": 100,
-  "totalCredits": 64,
+  "totalCredits": 70,
   "entries": [
     {
       "at": "2026-09-06T10:00:00.000Z",
@@ -414,6 +414,48 @@
       "credits": 1,
       "purpose": "benchmark: I25",
       "phase": "6-benchmark"
+    },
+    {
+      "at": "2026-09-06T14:00:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "country coverage: PT",
+      "phase": "7-countries"
+    },
+    {
+      "at": "2026-09-06T14:01:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "country coverage: PL",
+      "phase": "7-countries"
+    },
+    {
+      "at": "2026-09-06T14:02:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "country coverage: SE",
+      "phase": "7-countries"
+    },
+    {
+      "at": "2026-09-06T14:03:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "country coverage: IT",
+      "phase": "7-countries"
+    },
+    {
+      "at": "2026-09-06T14:04:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "country coverage: BE",
+      "phase": "7-countries"
+    },
+    {
+      "at": "2026-09-06T14:05:00.000Z",
+      "tool": "knowledge_search",
+      "credits": 1,
+      "purpose": "country coverage: DK",
+      "phase": "7-countries"
     }
   ]
 }
