@@ -12,6 +12,7 @@ import {
   type Lens,
   type Signal,
 } from "@/lib/console-data";
+import { CountrySelect } from "./CountrySelect";
 
 type Phase = "idle" | "analysing" | "done";
 type LensState = "idle" | "scanning" | "done";
@@ -71,7 +72,7 @@ export function AnalysisConsole() {
         <div className="border-b border-line p-5 md:border-b-0 md:border-r">
           <p className="tag">Your organisation</p>
           <div className="mt-4 space-y-3.5">
-            <Field label="Country"><Select value={country} onChange={setCountry} options={COUNTRIES} /></Field>
+            <Field label="Country"><CountrySelect value={country} onChange={setCountry} options={COUNTRIES} /></Field>
             <Field label="Cause / sector"><Select value={cause} onChange={(v) => setCause(v as Cause)} options={CAUSES} /></Field>
             <Field label="Legal status"><Select value={legal} onChange={setLegal} options={LEGAL_STATUSES} /></Field>
           </div>
