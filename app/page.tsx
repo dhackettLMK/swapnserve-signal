@@ -41,8 +41,8 @@ export default function Home() {
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-dim">
             Enter a country, a cause and a legal status. Signal uses Cala to read back the funding an
             organisation can actually apply for, the regulation heading its way, the partners worth
-            approaching, and how to frame its impact. Every item carries its source. Shown here on
-            Swap&rsquo;n&rsquo;Serve, a Limerick community initiative.
+            approaching, and how to frame its impact. Every item carries its source and a link to act
+            on it.
           </p>
         </Reveal>
         <Reveal delay={160}>

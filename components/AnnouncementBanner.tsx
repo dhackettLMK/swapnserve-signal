@@ -7,7 +7,7 @@ export function AnnouncementBanner() {
       href="/#console"
       className="keycap group inline-flex items-center gap-2 px-3 py-1.5 mono text-[11px] uppercase tracking-[0.14em] text-dim"
     >
-      Worked example: Swap&rsquo;n&rsquo;Serve, Limerick
+      Six sectors, national and EU funding, one console
       <span className="transition-transform duration-150 group-hover:translate-x-0.5">&rarr;</span>
     </Link>
   );

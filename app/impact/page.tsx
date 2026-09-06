@@ -5,13 +5,12 @@ import { SpecList } from "@/components/SpecList";
 import { Reveal } from "@/components/Reveal";
 import { ProvenanceChip } from "@/components/ProvenanceChip";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
-import { loadImpactFactors, loadSelfReported } from "@/lib/data";
+import { loadImpactFactors } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Impact" };
 
 export default function ImpactPage() {
   const factors = loadImpactFactors();
-  const selfReported = loadSelfReported();
 
   return (
     <div>
@@ -38,31 +37,6 @@ export default function ImpactPage() {
         </>
       ) : (
         <div className="mt-10 space-y-10">
-          {selfReported ? (
-            <Reveal>
-              <section className="panel p-6">
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <p className="tag">Swap&rsquo;n&rsquo;Serve so far</p>
-                  <span className="mono text-[10px] uppercase tracking-[0.14em] text-faint">self-reported</span>
-                </div>
-                <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-5">
-                  {selfReported.metrics.map((m) => (
-                    <div key={m.id}>
-                      <dd className="mono text-2xl text-ink tabular-nums">
-                        {m.unit === "EUR" ? "€" : ""}
-                        {m.value.toLocaleString()}
-                        {m.unit !== "EUR" ? "+" : "+"}
-                      </dd>
-                      <dt className="mt-1 text-[13px] text-dim">{m.label}</dt>
-                      {m.note ? <p className="mt-0.5 text-[11px] text-faint">{m.note}</p> : null}
-                    </div>
-                  ))}
-                </dl>
-                <p className="mt-5 border-t border-line pt-4 text-xs text-faint">{selfReported.disclaimer}</p>
-              </section>
-            </Reveal>
-          ) : null}
-
           <Reveal>
             <ImpactCalculator />
           </Reveal>

@@ -8,3 +8,18 @@
 {"at":"2026-09-06T10:07:00.000Z","tool":"knowledge_search","input":"What grants in Ireland fund community reuse or circular economy initiatives?","credits":1,"responseHash":"a8_ie_funding","outputPath":"data/funding/opportunities.json"}
 {"at":"2026-09-06T10:08:00.000Z","tool":"knowledge_search","input":"What are the textile Extended Producer Responsibility requirements in the revised EU Waste Framework Directive?","credits":1,"responseHash":"a9_textile_epr","outputPath":"data/policy/milestones.json"}
 {"at":"2026-09-06T10:09:00.000Z","tool":"knowledge_search","input":"What carbon savings per kilogram result from clothing reuse in life cycle assessments?","credits":1,"responseHash":"a10_reuse_lca","outputPath":"data/impact/factors.json"}
+{"at":"2026-09-06T11:10:00.000Z","tool":"knowledge_search","input":"What EU-wide grant programmes fund youth-led community projects?","credits":1,"responseHash":"b1_eu_youth"}
+{"at":"2026-09-06T11:11:00.000Z","tool":"knowledge_search","input":"What EU funding programmes support social inclusion and anti-poverty community projects?","credits":1,"responseHash":"b2_eu_social"}
+{"at":"2026-09-06T11:12:00.000Z","tool":"knowledge_search","input":"What EU funding programmes support arts and culture organisations?","credits":1,"responseHash":"b3_eu_arts"}
+{"at":"2026-09-06T11:13:00.000Z","tool":"knowledge_search","input":"What EU funding programmes support community health and wellbeing projects?","credits":1,"responseHash":"b4_eu_health"}
+{"at":"2026-09-06T11:14:00.000Z","tool":"knowledge_search","input":"What EU funding programmes support environment and climate action by community groups?","credits":1,"responseHash":"b5_eu_env"}
+{"at":"2026-09-06T11:20:00.000Z","tool":"knowledge_search","input":"ESPR requirements and digital product passport for textiles","credits":1,"responseHash":"b6_espr"}
+{"at":"2026-09-06T11:21:00.000Z","tool":"knowledge_search","input":"2026 Omnibus CSRD threshold changes","credits":1,"responseHash":"b7_csrd"}
+{"at":"2026-09-06T11:22:00.000Z","tool":"knowledge_search","input":"EU Social Economy Action Plan","credits":1,"responseHash":"b8_socecon"}
+{"at":"2026-09-06T11:23:00.000Z","tool":"knowledge_search","input":"EU Youth Strategy 2019 to 2027","credits":1,"responseHash":"b9_youthstrat"}
+{"at":"2026-09-06T11:24:00.000Z","tool":"knowledge_search","input":"New European Bauhaus initiative","credits":1,"responseHash":"b10_neb"}
+{"at":"2026-09-06T11:30:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in the United Kingdom","credits":1,"responseHash":"b11_uk"}
+{"at":"2026-09-06T11:31:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in France","credits":1,"responseHash":"b12_fr"}
+{"at":"2026-09-06T11:32:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in Germany","credits":1,"responseHash":"b13_de"}
+{"at":"2026-09-06T11:33:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in Spain","credits":1,"responseHash":"b14_es"}
+{"at":"2026-09-06T11:34:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in the Netherlands","credits":1,"responseHash":"b15_nl"}
