@@ -23,3 +23,12 @@
 {"at":"2026-09-06T11:32:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in Germany","credits":1,"responseHash":"b13_de"}
 {"at":"2026-09-06T11:33:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in Spain","credits":1,"responseHash":"b14_es"}
 {"at":"2026-09-06T11:34:00.000Z","tool":"knowledge_search","input":"National grants for community and nonprofit projects in the Netherlands","credits":1,"responseHash":"b15_nl"}
+{"at":"2026-09-06T12:00:00.000Z","tool":"knowledge_search","input":"How much carbon does a domestic energy retrofit save per year?","credits":1,"responseHash":"c1_retrofit"}
+{"at":"2026-09-06T12:01:00.000Z","tool":"knowledge_search","input":"How is social return on investment measured for community social inclusion projects?","credits":1,"responseHash":"c2_sroi"}
+{"at":"2026-09-06T12:02:00.000Z","tool":"knowledge_search","input":"What employment outcomes do youth skills and training programmes achieve?","credits":1,"responseHash":"c3_youth"}
+{"at":"2026-09-06T12:03:00.000Z","tool":"knowledge_search","input":"How does participation in arts and culture improve wellbeing?","credits":1,"responseHash":"c4_arts"}
+{"at":"2026-09-06T12:04:00.000Z","tool":"knowledge_search","input":"What is the return on investment of community health prevention programmes?","credits":1,"responseHash":"c5_health"}
+{"at":"2026-09-06T12:05:00.000Z","tool":"entity_search","input":"H&M Hennes & Mauritz [Company]","credits":1,"responseHash":"c6_hm_search"}
+{"at":"2026-09-06T12:06:00.000Z","tool":"entity_search","input":"Marks and Spencer [Company]","credits":1,"responseHash":"c7_ms_search"}
+{"at":"2026-09-06T12:07:00.000Z","tool":"entity_retrieval","input":"07094e1d H&M esg_policy,employee_count,hq","entityUuid":"07094e1d-776b-4ba7-9c97-f8e449e35cde","credits":1,"responseHash":"c8_hm_retrieve"}
+{"at":"2026-09-06T12:08:00.000Z","tool":"entity_retrieval","input":"f74a3409 M&S esg_policy,employee_count,hq","entityUuid":"f74a3409-dfb3-45e2-8528-4f9db698fce5","credits":1,"responseHash":"c9_ms_retrieve"}

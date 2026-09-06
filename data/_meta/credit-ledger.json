@@ -1,6 +1,6 @@
 {
   "budgetPerMonth": 100,
-  "totalCredits": 30,
+  "totalCredits": 39,
   "entries": [
     { "at": "2026-09-06T10:00:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Primark to a Cala entity", "phase": "2-partners" },
     { "at": "2026-09-06T10:01:00.000Z", "tool": "entity_introspection", "credits": 1, "purpose": "Learn the Company field schema", "phase": "1-recon" },
@@ -26,6 +26,15 @@
     { "at": "2026-09-06T11:31:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "France national community funding", "phase": "6-expansion" },
     { "at": "2026-09-06T11:32:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Germany national community funding", "phase": "6-expansion" },
     { "at": "2026-09-06T11:33:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Spain national community funding", "phase": "6-expansion" },
-    { "at": "2026-09-06T11:34:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Netherlands national community funding", "phase": "6-expansion" }
+    { "at": "2026-09-06T11:34:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Netherlands national community funding", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:00:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: home energy retrofit carbon savings", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:01:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: SROI for social inclusion", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:02:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: youth skills employment outcomes", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:03:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: arts participation and wellbeing", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:04:00.000Z", "tool": "knowledge_search", "credits": 1, "purpose": "Impact: community health prevention ROI", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:05:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve H&M", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:06:00.000Z", "tool": "entity_search", "credits": 1, "purpose": "Resolve Marks & Spencer", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:07:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "H&M esg_policy + headcount", "phase": "6-expansion" },
+    { "at": "2026-09-06T12:08:00.000Z", "tool": "entity_retrieval", "credits": 1, "purpose": "Marks & Spencer esg_policy + headcount", "phase": "6-expansion" }
   ]
 }
