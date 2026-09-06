@@ -59,3 +59,29 @@ Both endpoints accepted natural-language input cleanly. Dot-notation QL was not
 required for these domains; the questions were narrative or entity-lookup shaped.
 Worth testing QL filters (for example `companies.headquarters_location=Ireland.
 employee_count>500`) in a later pass and recording precision here.
+
+## Entity pass 2, 2026-09-06 (8 credits, Task 3 partners)
+
+Reused the Company schema from the first pass (no second introspection), running
+`entity_search` then a projected `entity_retrieval` on four targets across three
+countries and three sectors: **Inditex** (Spain, fashion), **adidas** (Germany,
+sportswear), **Carrefour** (France, grocery retail) and **SAP** (Germany,
+software). Two credits each, eight in total.
+
+- **`esg_policy` was populated for all four**, each individually sourced (GLEIF
+  for identity and address, the company's own sustainability pages for the
+  policy summary). No `knowledge_search` fallback was needed. This is the
+  opposite of the first pass, where `ANALOG DEVICES INC` returned an empty
+  `esg_policy`. Coverage is real but uneven, so it cannot be assumed present:
+  large, well-reported European issuers (Inditex, adidas, Carrefour, SAP,
+  Primark, H&M, M&S) resolve richly; a US-headquartered entity did not.
+- The projection (`name, legal_name, esg_policy, employee_count,
+  headquarters_address, registered_address` plus outgoing `HAS_HEADQUARTERS_IN`)
+  returned every field with its own source, exactly what the provenance model
+  needs. `HAS_HEADQUARTERS_IN` resolved to a `CountrySubdivision` (Bayern,
+  Essonne, Baden-Württemberg) for the German and French entities and to the
+  `Country` (Spain) for Inditex, a small inconsistency in the graph's geography
+  granularity worth noting.
+- Numeric `employee_count` came back as an integer with a single market-data
+  source, not the entity's own filing; treat as single-source for a headline
+  figure even though the entity record itself is verified.

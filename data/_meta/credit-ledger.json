@@ -1,6 +1,6 @@
 {
   "budgetPerMonth": 100,
-  "totalCredits": 70,
+  "totalCredits": 78,
   "entries": [
     {
       "at": "2026-09-06T10:00:00.000Z",
@@ -456,6 +456,62 @@
       "credits": 1,
       "purpose": "country coverage: DK",
       "phase": "7-countries"
+    },
+    {
+      "at": "2026-09-06T15:00:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "partner resolve: inditex",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:01:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "partner resolve: adidas",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:02:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "partner resolve: carrefour",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:03:00.000Z",
+      "tool": "entity_search",
+      "credits": 1,
+      "purpose": "partner resolve: sap",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:04:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "partner retrieve: inditex",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:05:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "partner retrieve: adidas",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:06:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "partner retrieve: carrefour",
+      "phase": "8-partners"
+    },
+    {
+      "at": "2026-09-06T15:07:00.000Z",
+      "tool": "entity_retrieval",
+      "credits": 1,
+      "purpose": "partner retrieve: sap",
+      "phase": "8-partners"
     }
   ]
 }

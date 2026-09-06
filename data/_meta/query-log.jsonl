@@ -63,3 +63,11 @@
 {"at":"2026-09-06T14:03:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and voluntary organisations in Italy?","credits":1,"responseHash":"country_it"}
 {"at":"2026-09-06T14:04:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and community organisations in Belgium?","credits":1,"responseHash":"country_be"}
 {"at":"2026-09-06T14:05:00.000Z","tool":"knowledge_search","input":"What national grants fund nonprofit and community organisations in Denmark?","credits":1,"responseHash":"country_dk"}
+{"at":"2026-09-06T15:00:00.000Z","tool":"entity_search","input":"Inditex [Company]","credits":1,"responseHash":"partner_s_inditex"}
+{"at":"2026-09-06T15:01:00.000Z","tool":"entity_search","input":"adidas [Company]","credits":1,"responseHash":"partner_s_adidas"}
+{"at":"2026-09-06T15:02:00.000Z","tool":"entity_search","input":"Carrefour [Company]","credits":1,"responseHash":"partner_s_carrefour"}
+{"at":"2026-09-06T15:03:00.000Z","tool":"entity_search","input":"SAP SE [Company]","credits":1,"responseHash":"partner_s_sap"}
+{"at":"2026-09-06T15:04:00.000Z","tool":"entity_retrieval","input":"a758f680-cd9f-42e5-b8cc-bde29d8aa36d esg_policy,employee_count,hq","credits":1,"responseHash":"partner_r_inditex","entityUuid":"a758f680-cd9f-42e5-b8cc-bde29d8aa36d"}
+{"at":"2026-09-06T15:05:00.000Z","tool":"entity_retrieval","input":"29c6748f-4502-47a4-9def-5691e9159373 esg_policy,employee_count,hq","credits":1,"responseHash":"partner_r_adidas","entityUuid":"29c6748f-4502-47a4-9def-5691e9159373"}
+{"at":"2026-09-06T15:06:00.000Z","tool":"entity_retrieval","input":"4ca4d357-847d-4b64-88ec-a4945b27e45a esg_policy,employee_count,hq","credits":1,"responseHash":"partner_r_carrefour","entityUuid":"4ca4d357-847d-4b64-88ec-a4945b27e45a"}
+{"at":"2026-09-06T15:07:00.000Z","tool":"entity_retrieval","input":"f12af13b-ef4f-46ab-ae4e-ea2cce55d391 esg_policy,employee_count,hq","credits":1,"responseHash":"partner_r_sap","entityUuid":"f12af13b-ef4f-46ab-ae4e-ea2cce55d391"}

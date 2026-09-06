@@ -758,6 +758,64 @@ export const SIGNALS: Signal[] = [
     via: "entity_search, retrieval",
   },
 
+  // ---------------- Partners (wider countries / sectors) ----------------
+  {
+    lens: "partners",
+    title: "Inditex (Zara)",
+    detail:
+      "Spain's largest fashion producer (161,280 employees, HQ Arteixo), so a fee-paying producer under EU textile EPR from 2028. Publishes a Group Sustainability Policy (last amended February 2025) and a Stakeholder Relations Policy. A research target, not a partner: worth engaging before the scheme is live.",
+    causes: ["Circular economy & reuse", "Environment & climate"],
+    geographies: ["Spain", "eu"],
+    confidence: "verified",
+    sourceLabel: "inditex.com",
+    sourceUrl: "https://www.inditex.com/itxcomweb/en/sustainability",
+    actionLabel: "Contact / commitments",
+    actionUrl: "https://www.inditex.com",
+    via: "entity_search, retrieval",
+  },
+  {
+    lens: "partners",
+    title: "adidas",
+    detail:
+      "Major German sportswear producer (adidas AG, ~62,000 employees, HQ Herzogenaurach), obligated under EU textile EPR. Publishes a Climate Transition Action Plan and supplier Workplace Standards and Environmental Guidelines. A research target for an early circular-reuse relationship.",
+    causes: ["Circular economy & reuse", "Environment & climate"],
+    geographies: ["Germany", "eu"],
+    confidence: "verified",
+    sourceLabel: "adidas-group.com",
+    sourceUrl: "https://www.adidas-group.com/en/sustainability",
+    actionLabel: "Contact / commitments",
+    actionUrl: "https://www.adidas-group.com",
+    via: "entity_search, retrieval",
+  },
+  {
+    lens: "partners",
+    title: "Carrefour",
+    detail:
+      "One of France's largest employers (~324,000 staff, HQ Massy): a grocery retailer, not a textile producer, but with a Sustainability Policy targeting Scope 1-3 emission cuts and a 42% food-waste reduction by 2030, plus community programmes. A research target for corporate support beyond the textile sector.",
+    causes: ["Environment & climate", "Social inclusion", "Circular economy & reuse"],
+    geographies: ["France"],
+    confidence: "verified",
+    sourceLabel: "carrefour.com",
+    sourceUrl: "https://www.carrefour.com/en/csr",
+    actionLabel: "Contact / commitments",
+    actionUrl: "https://www.carrefour.com",
+    via: "entity_search, retrieval",
+  },
+  {
+    lens: "partners",
+    title: "SAP",
+    detail:
+      "Europe's largest software company (SAP SE, ~110,000 employees, HQ Walldorf), a non-consumer sector entirely outside textiles. Publishes a Global Environmental Policy, follows the UN Global Compact and runs digital-skills programmes. A research target showing the tool works for corporate supporters beyond retail.",
+    causes: ["Environment & climate", "Youth & education", "Social inclusion"],
+    geographies: ["Germany"],
+    confidence: "verified",
+    sourceLabel: "sap.com",
+    sourceUrl: "https://www.sap.com/about/company/sustainability.html",
+    actionLabel: "Contact / commitments",
+    actionUrl: "https://www.sap.com",
+    via: "entity_search, retrieval",
+  },
+
   // ---------------- Impact framings by sector ----------------
   {
     lens: "impact",
