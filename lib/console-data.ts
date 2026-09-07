@@ -85,7 +85,7 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "European Solidarity Corps, Solidarity Projects",
     detail:
-      "Groups of at least 5 young people (18–30) run their own 2–12 month local project. Informal groups can apply, no established NGO needed. 2026 call over €129m.",
+      "A group of at least 5 young people (18–30) can apply directly, with no established NGO or legal entity needed, as the European Solidarity Corps Programme Guide sets out. They run a 2–12 month local project and receive up to €500 a month plus activity costs.",
     causes: ["Youth & education", "Social inclusion", "Environment & climate", "Circular economy & reuse"],
     geographies: ["eu"],
     confidence: "verified",
@@ -113,7 +113,7 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "LIFE Programme (Environment & Climate Action)",
     detail:
-      "The EU's dedicated environment and climate fund. Circular Economy & Quality of Life sub-programme; open to NGOs and community groups; up to 60% co-funding.",
+      "The EU's dedicated environment and climate fund, with a Circular Economy & Quality of Life sub-programme. Standard action grants co-fund a share of project costs (historically around 60%) and are open to a range of legal entities including NGOs. Confirm the rate and eligibility in the current call.",
     causes: ["Circular economy & reuse", "Environment & climate"],
     geographies: ["eu"],
     confidence: "verified",
@@ -127,7 +127,7 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "Creative Europe (Culture strand)",
     detail:
-      "The EU's dedicated culture programme: cooperation projects, networks, and Culture Moves Europe mobility grants. €396m proposed for 2026. Apply via your national Creative Europe Desk.",
+      "The EU's dedicated culture programme: cooperation projects, networks, and Culture Moves Europe mobility grants for non-profit cultural organisations. Apply via your national Creative Europe Desk; check the current call for budgets and deadlines.",
     causes: ["Arts & culture"],
     geographies: ["eu"],
     confidence: "verified",
@@ -155,7 +155,7 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "Citizens, Equality, Rights and Values (CERV)",
     detail:
-      "Funds civic engagement, equality and rights projects by civil-society organisations. Strand grants from about €75k. Apply via the EU Funding & Tenders Portal.",
+      "Funds civic engagement, equality and rights projects by civil-society organisations, through the EU Funding & Tenders Portal. Check the current call for grant sizes and deadlines.",
     causes: ["Social inclusion", "Arts & culture", "Health & wellbeing"],
     geographies: ["eu"],
     confidence: "verified",
@@ -199,10 +199,10 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "Community Climate Action Programme (CCAP) Phase II",
     detail:
-      "€20k–€100k via local councils for circular-living, upcycling, library-of-things and fix-it projects. Apply through Limerick City and County Council when the round opens.",
+      "Grants via local councils for circular-living, upcycling, library-of-things and fix-it projects (recent rounds around €20k–€100k). Apply through your local authority when the round opens; amounts and dates vary by round.",
     causes: ["Circular economy & reuse", "Environment & climate"],
     geographies: ["Ireland"],
-    confidence: "verified",
+    confidence: "single-source",
     sourceLabel: "circular.ie",
     sourceUrl: "https://circular.ie/articles/community-climate-fund-phase-ii",
     actionLabel: "Apply / info",
@@ -229,12 +229,12 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "National Lottery Community Fund, Awards for All",
     detail:
-      "£300–£10,000 for community projects across arts, sport, heritage, education, environment and community health. The UK's largest community funder.",
+      "£300–£20,000 for community projects across arts, sport, heritage, education, environment and community health. Applicants need a governing document and a bank account, so a constituted community group rather than a bare individual.",
     causes: ["Social inclusion", "Arts & culture", "Environment & climate", "Health & wellbeing", "Youth & education", "Circular economy & reuse"],
     geographies: ["United Kingdom"],
     confidence: "verified",
     sourceLabel: "tnlcommunityfund.org.uk",
-    sourceUrl: "https://www.tnlcommunityfund.org.uk",
+    sourceUrl: "https://www.tnlcommunityfund.org.uk/funding/programmes/national-lottery-awards-for-all-england",
     actionLabel: "Apply / info",
     actionUrl: "https://www.tnlcommunityfund.org.uk",
     via: "knowledge_search",
@@ -303,7 +303,7 @@ export const SIGNALS: Signal[] = [
     lens: "funding",
     title: "Aktion Mensch",
     detail:
-      "Germany's largest social-sector funder (lottery-financed). Grants up to €10,000 for inclusive community, neighbourhood and arts projects; supports up to 1,000 projects a month.",
+      "Germany's largest social-sector funder (lottery-financed). Micro-grants up to €5,000, project funding up to €450,000, and foundation model projects up to €600,000. Backs inclusive community, neighbourhood and youth projects.",
     causes: ["Social inclusion", "Arts & culture", "Youth & education"],
     geographies: ["Germany"],
     confidence: "verified",
@@ -645,7 +645,7 @@ export const SIGNALS: Signal[] = [
     lens: "policy",
     title: "EU Social Economy Action Plan",
     detail:
-      "A 2021–2026 Commission plan to improve framework conditions, finance and visibility for social-economy organisations, with a Council Recommendation and an EU Social Economy Gateway.",
+      "A 2021–2030 Commission plan (a nine-year horizon, with a mid-term review in 2025) to improve framework conditions, finance and visibility for social-economy organisations, with a Council Recommendation and an EU Social Economy Gateway.",
     causes: ["Social inclusion", "Circular economy & reuse"],
     geographies: ["eu"],
     confidence: "verified",

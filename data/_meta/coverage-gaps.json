@@ -35,6 +35,33 @@
       "calaTool": "entity_search",
       "observedAt": "2026-09-06T10:07:00.000Z",
       "detail": "knowledge_search returned excellent, gov.ie-sourced funding detail, so the gap is in the entity model, not the underlying knowledge."
+    },
+    {
+      "id": "console-data-corrections-2026-09",
+      "domain": "funding",
+      "summary": "Three funding facts were wrong or stale and were corrected against the funders' own pages: Aktion Mensch's maximum grant (listed as up to EUR 10,000; actually micro EUR 5,000, project up to EUR 450,000, foundation model projects up to EUR 600,000), the National Lottery Awards for All range (listed GBP 300 to 10,000; the funder's page states GBP 300 to 20,000), and the EU Social Economy Action Plan period (listed 2021 to 2026; it runs 2021 to 2030 on a nine-year horizon).",
+      "reproducibleQuery": "aktion-mensch.de/foerderung/foerderprogramme/stiftung; tnlcommunityfund.org.uk/funding/programmes/national-lottery-awards-for-all-england; eur-lex 52021DC0778.",
+      "calaTool": "primary-source",
+      "observedAt": "2026-09-07T09:00:00.000Z",
+      "detail": "The Aktion Mensch and Social Economy Action Plan errors were first surfaced by the /benchmark run, where web search and Cala disagreed with the committed data; the Awards for All figure was caught during this deadline-and-eligibility pass."
+    },
+    {
+      "id": "funder-figures-not-on-landing-pages",
+      "domain": "funding",
+      "summary": "Several specific budget or grant figures could not be confirmed from the funders' own landing pages and were removed or softened rather than asserted: the ESC 2026 call total (~EUR 129m), the Creative Europe 2026 budget (~EUR 396m), a CERV strand minimum (~EUR 75k), and the LIFE co-funding rate (~60%).",
+      "reproducibleQuery": "WebFetch youth.europa.eu/solidarity/organisations/solidarity-projects_en; culture.ec.europa.eu/creative-europe; cinea.ec.europa.eu/programmes/life_en. None state the figure on the landing page.",
+      "calaTool": "primary-source",
+      "observedAt": "2026-09-07T09:05:00.000Z",
+      "detail": "The figures are plausible and appear in secondary sources, but the acceptance bar is that a primary source support any specific figure. They can be reinstated once confirmed from an official call document."
+    },
+    {
+      "id": "deadline-sweep-partial",
+      "domain": "funding",
+      "summary": "The top funding signals were checked for current-round status and unincorporated eligibility, but a full per-round deadline verification across all ~30 funding signals is not yet complete.",
+      "reproducibleQuery": "Compare each funding signal's detail against the funder's current call page for a hard deadline.",
+      "calaTool": "primary-source",
+      "observedAt": "2026-09-07T09:10:00.000Z",
+      "detail": "No funding signal asserts a specific future deadline; most state amounts and eligibility with an open or predictable round. The remaining national signals should be swept on the next refresh."
     }
   ]
 }
