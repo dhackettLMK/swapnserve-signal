@@ -62,6 +62,24 @@
       "calaTool": "primary-source",
       "observedAt": "2026-09-07T09:10:00.000Z",
       "detail": "No funding signal asserts a specific future deadline; most state amounts and eligibility with an open or predictable round. The remaining national signals should be swept on the next refresh."
+    },
+    {
+      "id": "knowledge-query-no-citations",
+      "domain": "general",
+      "summary": "knowledge_query returns clean structured rows but without source citations, where knowledge_search returns the same facts with resolvable sources. Choosing structured output means losing provenance, which matters when every rendered fact needs a source.",
+      "reproducibleQuery": "knowledge_query 'What is the largest community grant funder in the United Kingdom?' returns a name with no source URL; knowledge_search of the same question returns the answer with citations.",
+      "calaTool": "knowledge_query",
+      "observedAt": "2026-09-06T13:00:00.000Z",
+      "detail": "Observed across the /benchmark run (questions F3 and F7). Workaround: use knowledge_search when a rendered fact needs provenance, and reserve knowledge_query for internal filtering where the source is not shown."
+    },
+    {
+      "id": "entity-geography-granularity",
+      "domain": "partners",
+      "summary": "The HAS_HEADQUARTERS_IN relationship resolves to a CountrySubdivision for some companies (Bayern for adidas, Essonne for Carrefour, Baden-Wurttemberg for SAP) and to a Country for others (Spain for Inditex), so geography granularity is inconsistent across otherwise similar company records.",
+      "reproducibleQuery": "entity_retrieval with relationships.outgoing.HAS_HEADQUARTERS_IN on adidas (29c6748f-4502-47a4-9def-5691e9159373) returns Bayern; on Inditex (a758f680-cd9f-42e5-b8cc-bde29d8aa36d) returns Spain.",
+      "calaTool": "entity_retrieval",
+      "observedAt": "2026-09-06T15:00:00.000Z",
+      "detail": "Not blocking, but code reading a country from HAS_HEADQUARTERS_IN must also handle a subdivision and walk up to its country. A positive note alongside this: esg_policy coverage was complete for all four large European issuers queried in the second entity pass, so the gap is granularity, not absence."
     }
   ]
 }

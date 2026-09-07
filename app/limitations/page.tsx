@@ -15,7 +15,7 @@ export default function LimitationsPage() {
       <PageHeader
         eyebrow="Honest coverage"
         title="Limitations"
-        intro="Where Cala's coverage was thin for Irish civil-society and Mid-West corporate entities, with reproducible queries. Characterising the edges of the data is the point, not an apology. The same write-up goes to the Cala team."
+        intro="The observed edges of Cala's coverage and behaviour, each paired with the exact query that surfaces it. Characterising the edges is the point, not an apology: several are workarounds rather than failures, and where Cala was strong that is said plainly. The same write-up goes to the Cala team."
       />
 
       {gaps.length === 0 ? (
